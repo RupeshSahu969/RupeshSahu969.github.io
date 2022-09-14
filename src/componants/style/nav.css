@@ -1,0 +1,7 @@
+.active {
+  font-weight: bold;
+  color: #c3073f;
+}
+a:hover {
+  cursor: pointer;
+}
