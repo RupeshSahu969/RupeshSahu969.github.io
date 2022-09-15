@@ -4,6 +4,7 @@ import { arrow } from "./style/theme";
 import styles from "./header.module.css";
 import RubberBand from 'react-reveal/RubberBand';
 import Slide from 'react-reveal/Slide';
+import mypic1 from "./Assets/mypic1.png"
 import "./portfolio.css";
 import Fade from 'react-reveal/Fade';
 const About = () => {
@@ -49,7 +50,7 @@ const About = () => {
           <div>
          <Fade>
              <div className="col-md-6  my-5 py-5  ">
-             <img src="mypic.jpg" className="img-thumbnail " alt="mypic"/>
+             <img src={mypic1} className="img-thumbnail " alt="mypic1"/>
              </div>
              </Fade>
 
