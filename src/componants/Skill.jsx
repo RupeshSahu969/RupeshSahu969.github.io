@@ -15,10 +15,10 @@ const Skill = () => {
   return (
     <Box id="skill" pt={10} pb="10%">
       <Box m="auto" w={["50%", "25%", "30%", "15%"]}>
-        <Heading bg="pink" fontWeight="300" color="white" p={1}>
+        <Heading bg="black" fontWeight="300" color="white" p={1}>
           My Skills
         </Heading>
-        <Box style={arrow} bg="pink"></Box>
+        <Box style={arrow} bg="black"></Box>
       </Box>
       <SimpleGrid
         id="skillDiv"

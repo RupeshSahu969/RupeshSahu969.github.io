@@ -1,10 +1,15 @@
 import { Box, Text, Heading, Stack, Flex } from "@chakra-ui/react";
 import React from "react";
 import { arrow } from "./style/theme";
+import styles from "./header.module.css";
+import RubberBand from 'react-reveal/RubberBand';
+import Slide from 'react-reveal/Slide';
+import "./portfolio.css";
+import Fade from 'react-reveal/Fade';
 const About = () => {
   return (
-    <Box id="about" pt={5} p={10}>
-      <Box m="auto" w={["30%", "25%", "30%", "20%"]}>
+    <Box id="about"  pt={5} p={10}>
+      {/* <Box m="auto" w={["30%", "25%", "30%", "20%"]}>
         <Heading fontWeight="300" color="white" bg="pink">
           About Me
         </Heading>
@@ -34,7 +39,46 @@ const About = () => {
           executing goal orianted projects. Looking forward to applying and
           enhancing my skills and knowledge as a developer
         </Text>
-      </Stack>
+      </Stack> */}
+
+<div id="profile">
+     <div className='container-fluid  p-5  '>
+         <div className="row  profile m-4 p-2">
+         <h3>About Me</h3>
+         <div className="pro1">
+          <div>
+         <Fade>
+             <div className="col-md-6  my-5 py-5  ">
+             <img src="mypic.jpg" className="img-thumbnail " alt="mypic"/>
+             </div>
+             </Fade>
+
+
+             </div>
+             <div>
+             <Fade right>
+             <div className="col-md-6  my-5 py-5">
+               {/* <h1 className='text text-center font-weight-bold'>Hello, I am Rupesh Sahu👋</h1> */}
+               <div className="pro2">
+                <h4>I am Rupesh Sahu</h4>
+                 <p className='text text-center  my-5 h3'>
+                  <br/>
+                 I'am Quick learner and an aspiring full-stack
+             web developer with core knowledge of MERN stack technology.
+              Looking forward to applying and enhancing my skills and knowledge as a developer 
+
+                 </p>
+               </div>
+               {/*  */}
+               
+             </div>
+             </Fade>
+             </div>
+             </div>
+         </div>
+     </div>
+    </div>
+
     </Box>
   );
 };

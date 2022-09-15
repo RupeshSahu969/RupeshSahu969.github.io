@@ -15,9 +15,9 @@ import {
   Container,
 } from "@chakra-ui/react";
 
-import { BsGithub } from "react-icons/bs";
+import { BsGithub, BsLinkedin, BsMailbox, BsPhone } from "react-icons/bs";
 import { arrow } from "./style/theme";
-const profile = require("../componants/Assets/mypic.png");
+const profile = require("../componants/Assets/mypic1.png");
 const Home = () => {
   const imagestyle = {
     width: "90%",
@@ -27,7 +27,7 @@ const Home = () => {
   return (
     <>
       {" "}
-      <Stack id="home" h="100vh" mt={["-10px"]} w="100%" bg="black" pb={3}>
+      <Stack id="home" h="100vh" mt={["-10px"]} w="100%" bg="white" pb={3}>
         <Flex
           m="auto"
           direction={["column", "column", "row"]}
@@ -44,20 +44,20 @@ const Home = () => {
             justify="center"
             pl={"10%"}
           >
-            <Box w={["30%", "25%", "30%", "20%"]}>
-              <Flex gap={2} bg="pink" p={1} align="center">
-                <Heading fontWeight="300" color="white">
+            <Box w={["30%", "25%", "30%", "20%"]} marginTop="30px">
+              <Flex gap={2} bg="white" p={1} align="center">
+                <Heading fontWeight="300" color="black">
                   Hello
                 </Heading>
                 <Heading className="hand">👋</Heading>
               </Flex>
 
-              <Box style={arrow} bg="pink"></Box>
+              <Box style={arrow} bg="white"></Box>
             </Box>
-            <Heading fontSize="60px" color="white">
+            <Heading fontSize="60px" color="black">
               I'm Rupesh Sahu
             </Heading>
-            <Heading fontSize="40px" color="white">
+            <Heading fontSize="40px" color="black">
               Full Stack Web Developer
             </Heading>
             <Flex align="center" gap={5}>
@@ -71,15 +71,52 @@ const Home = () => {
               </Button>
               <Link
                 className="iconlink"
-                bg="white"
+                
                 borderRadius="50%"
                 border="1px solid black"
                 fontSize="30px"
-                color="pink"
-                href="https://drive.google.com/file/d/1-fdqtMtcz7izTNbcICILJ5NyhWYB35y8/view?usp=sharing"
+                
+                href="https://github.com/RupeshSahu969"
                   target="_blank"
               >
                 <BsGithub className="icon" />
+              </Link>
+              <Link
+                className="iconlink"
+            
+                borderRadius="50%"
+                border="1px solid black"
+                fontSize="30px"
+                
+                href="https://www.linkedin.com/in/rupesh-sahu-4924a6119/"
+                  target="_blank"
+              >
+                <BsLinkedin className="icon" />
+              </Link>
+              <Link
+                className="iconlink"
+                
+                borderRadius="50%"
+                border="1px solid black"
+                fontSize="30px"
+                
+                href="tel:8103490175"
+                
+                  target="_blank"
+              >
+                <BsPhone className="icon" />
+              </Link>
+              <Link
+                className="iconlink"
+                
+                borderRadius="50%"
+                border="1px solid black"
+                fontSize="30px"
+                
+                href="mailto:rupeshsahu969@email.com?subject=subject&cc=supeshshau969@gmail.com"
+                    target="_blank"
+              >
+                <BsMailbox className="icon" />
               </Link>
             </Flex>
           </Stack>
@@ -89,16 +126,16 @@ const Home = () => {
             align="center"
             pt={3}
           >
-            <Image
-            marginTop="40%"
+            {/* <Image
+            marginTop="50%"
               borderRadius="full"
-              boxSize='400px'
+              boxSize='200px'
               src={profile}
-              // w={["100%"]}
-              // h={["50%"]}
-              // mt={["5%", "5%", "50%", "30%"]}
+              // w={["30%"]}
+              // h={["30%"]}
+              // mt={["5%", "5%"]}
               bg="#B0B8B4FF"
-            />
+            /> */}
           </Box>
         </Flex>
       </Stack>

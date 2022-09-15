@@ -33,10 +33,10 @@ const Project = () => {
   return (
     <Box id="projects">
       <Box m="auto" w={["50%", "40%", "30%", "15%"]}>
-        <Heading bg="pink" fontWeight="300" color="white">
+        <Heading bg="teal" fontWeight="300" color="white">
           Projects
         </Heading>
-        <Box style={arrow} bg="pink"></Box>
+        <Box style={arrow} bg="teal"></Box>
       </Box>
       <SimpleGrid
         columns={[1, 1, 1, 1, 2]}

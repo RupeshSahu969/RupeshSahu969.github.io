@@ -1,0 +1,278 @@
+.card {
+  -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0), 5px 5px 15px 5px rgba(241, 255, 235, 0);
+  box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0), 5px 5px 15px 5px rgba(241, 255, 235, 0);
+
+  transition-duration: 500ms;
+  transition-property: box-shadow, transform;
+  transition-timing-function: ease-in-out;
+  /* background: rgba(15, 9, 123, 0.199);
+    color:white */
+}
+.card:hover {
+  transform: translateY(-30px);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+@keyframes color {
+  0% {
+    background: #aee3e3;
+  }
+  20% {
+    background: #99d49a;
+  }
+  40% {
+    background: #d1dc8f;
+  }
+  60% {
+    background: #d59c76ac;
+  }
+  80% {
+    background: #635fa6;
+  }
+  100% {
+    background: #da7acddf;
+  }
+}
+
+.card {
+  /* Fallback */
+  animation: color 9s infinite linear;
+  text-align: center;
+}
+.card > img {
+  height: 12rem;
+}
+.card > a:hover {
+  background-color: #bfd626;
+}
+.dev1{
+  margin-top: 30px;
+  
+}
+/* .dev2{
+  margin-top: 55px;
+  
+} */
+.dev3{
+  margin-top: 40px;
+  
+}
+.dev4{
+  margin-top: 20px;
+  
+}
+.box {
+  display: flex;
+  justify-content: center;
+  width:80%;
+  
+  margin:auto;
+  padding:1rem 0;
+  /* box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
+}
+.box > div {
+  height: 100px;
+  width: 100px;
+  margin: 15px;
+  padding: 1rem;
+  border-radius: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  transition: width 2s, height 2s;
+  background: linear-gradient(145deg, #e6e6e6, #e1d7d7);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  transition: width 1s, height 1s;
+}
+.box > div:hover {
+  width: 130px;
+  height: 130px;
+  border-radius: 60px;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+
+
+.container > button {
+  position: relative;
+  right: 25px;
+  bottom: 20px;
+  border: none;
+  box-shadow: none;
+  width: 100px;
+  height: 40px;
+  line-height: 42px;
+  -webkit-perspective: 230px;
+  perspective: 230px;
+}
+.container > button span {
+  background: rgb(10, 10, 10);
+  background: linear-gradient(0deg, rgb(13, 15, 17) 0%, rgrgb(53, 55, 57) 00%);
+  color: white;
+  display: block;
+  position: absolute;
+  width: 130px;
+  height: 40px;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin: 0;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.container > button span:nth-child(1) {
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.container > button span:nth-child(2) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.container > button:hover span:nth-child(1) {
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+.container > button:hover span:nth-child(2) {
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  color: transparent;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+}
+
+.profile > div > img {
+  -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0), 5px 5px 15px 5px rgba(241, 255, 235, 0);
+  box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0), 5px 5px 15px 5px rgba(241, 255, 235, 0);
+
+}
+.profile{
+  margin-top: 30px;
+}
+
+.profile>div>div>p{
+
+  font-size: 1.2rem;
+}
+.profile>div>button>a{
+
+  font-size: 1.5rem;
+}
+.pro3{
+  display: flex;
+  
+}
+.pro3 >div{
+  margin-top: 20px;
+  margin: 10px;
+}
+.profile> h3{
+   background-color: #000000;
+   color: white;
+  font-size: 30px;
+  width: 200px;
+  height: 50px;
+  margin: auto;
+}
+.pro1{
+  display:  flex;
+  width: 80%;
+  /* height: 500px; */
+  
+  margin: auto;
+  margin-top: 50px;
+  /* border: 1px solid black; */
+}
+.home1{
+  display: flex;
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  border: 1px solid black;
+}
+.home1>div > h1{
+  font-size: 40px;
+}
+
+.home1>div > h2{
+  font-size: 40px;
+  margin-left: 200px;
+}
+
+.pro1> div > p{
+  
+  margin-top: 30px;
+}
+.pro1 > div {
+  margin-top: 20px;
+  /* height: 400px;
+  width: 60%; */
+  font-size: 30px;
+  margin: auto;
+  /* border: 1px solid black */
+}
+.pro2{
+  width: 60%;
+  
+  margin: auto;
+}.pro2> h4{
+  font-size: 30px;
+  color: black;
+}
+.profile>div>button>a:hover{
+  -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000,
+  5px 5px 15px 5px rgba(0, 0, 0, 0), 5px 5px 15px 5px rgba(241, 255, 235, 0);
+box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000,
+  5px 5px 15px 5px rgba(0, 0, 0, 0), 5px 5px 15px 5px rgba(241, 255, 235, 0);
+} 
+@media all and (max-width: 1000px) and (min-width: 450px) {
+  /* mobile-devices */
+  .pro1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+  }
+}
+@media all and (max-width: 449px) and (min-width: 300px) {
+  /* mobile-devices */
+  .pro1 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media all and (max-width: 299px) and (min-width: 100px) {
+  /* mobile-devices */
+  .pro1 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    
+    
+  
+  }
+}

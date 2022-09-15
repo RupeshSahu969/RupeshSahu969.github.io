@@ -14,9 +14,11 @@ const Main = () => {
       <Box>
         <Home />
         <About />
+        {/* <Profile/> */}
         <Skill />
         <Project />
         <Contact />
+        {/* <Footer/> */}
       </Box>
     </Stack>
   );
