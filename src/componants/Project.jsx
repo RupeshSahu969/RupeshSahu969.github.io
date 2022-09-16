@@ -16,6 +16,8 @@ import { arrow } from "./style/theme";
 import { FaTelegramPlane, FaGithub } from "react-icons/fa";
 const nord = require("../componants/Assets/geek.png");
 const bestbuy = require("../componants/Assets/news.png");
+const fabbag = require("../componants/Assets/fabbag.png");
+const quiz = require("../componants/Assets/quiz.png");
 
 const cardStyle = {
   borderRadius: "10px",
@@ -135,6 +137,92 @@ On Sports, Business, Technology, Entertainment
             />
           </Box>
         </Box>
+
+        <Box w="70%" m="auto" className="card">
+          <Stack w="100%" h={"370px"} style={cardStyle}>
+            <Heading fontSize="150%">Quiz App</Heading>
+            <Text>
+              
+            Basic Quiz app to test your computer knowledge Also the question and
+            its optins changed in every pages reload
+            
+            </Text>
+            <Text>Simple Project.</Text>
+            <Text>Tech Skill used : HTML5 | CSS3| Bootstrap | JavaScript</Text>
+            <Flex gap={3} align="center">
+              <Button size="xs" colorScheme="green">
+                <Link
+                  href="https://github.com/RupeshSahu969/QuizzApp-javasccript"
+                  target="_blank"
+                >
+                  <Flex align="center" gap={2}>
+                    <Text> Code</Text>
+                    <FaGithub />
+                  </Flex>
+                </Link>
+              </Button>
+              <Button size="xs" colorScheme="red">
+                <Link href="https://lively-kleicha-dca27e.netlify.app/" target="_blank">
+                  <Flex align="center" gap={2}>
+                    <Text>Live</Text>
+                    <FaTelegramPlane />
+                  </Flex>
+                </Link>
+              </Button>
+            </Flex>
+          </Stack>
+          <Box w="90%" h="330px" className="imageBox" style={imgcardstyle}>
+            <Image
+              src={quiz}
+              w="100%"
+              h="100%"
+              objectFit="cover"
+              borderRadius="10px"
+            />
+          </Box>
+        </Box>
+
+        <Box w="70%" m="auto" className="card">
+          <Stack w="100%" h={"370px"} style={cardStyle}>
+            <Heading fontSize="150%">Fab-Bag- Clone</Heading>
+            <Text>
+            Fab-Bag Website  is buying monthly subscrition of makupp  
+                        </Text>
+            <Text>An Group Project ,Executed in 5 days.</Text>
+            <Text>Tech Skill used : HTML | CSS| Bootstrap | JavaScript</Text>
+            <Flex gap={3} align="center">
+              <Button size="xs" colorScheme="green">
+                <Link
+                  href="https://github.com/mdnasirdmt/fab-bag-clone-again"
+                  target="_blank"
+                >
+                  <Flex align="center" gap={2}>
+                    <Text> Code</Text>
+                    <FaGithub />
+                  </Flex>
+                </Link>
+              </Button>
+              <Button size="xs" colorScheme="red">
+                <Link href="https://fantastic-squirrel-8ca900.netlify.app/" target="_blank">
+                  <Flex align="center" gap={2}>
+                    <Text>Live</Text>
+                    <FaTelegramPlane />
+                  </Flex>
+                </Link>
+              </Button>
+            </Flex>
+          </Stack>
+          <Box w="90%" h="330px" className="imageBox" style={imgcardstyle}>
+            <Image
+              src={fabbag}
+              w="100%"
+              h="100%"
+              objectFit="cover"
+              borderRadius="10px"
+            />
+          </Box>
+        </Box>
+        
       </SimpleGrid>
     </Box>
   );

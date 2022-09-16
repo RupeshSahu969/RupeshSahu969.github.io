@@ -258,21 +258,22 @@ box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000,
     grid-template-columns: repeat(2, 1fr);
     
   }
+  
 }
 @media all and (max-width: 449px) and (min-width: 300px) {
   /* mobile-devices */
   .pro1 {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    
   }
+  
 }
 @media all and (max-width: 299px) and (min-width: 100px) {
   /* mobile-devices */
   .pro1 {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    
-    
-  
   }
+  
 }

@@ -24,7 +24,7 @@ const Navbar = () => {
   };
 
   return (
-    <Stack style={navstyle} bg="transperent" p={2} color="#4e4e50">
+    <Stack style={navstyle} bg="transperent" p={2} color="gery">
       <SimpleGrid
         columns={2}
         align="center"

@@ -1,6 +1,7 @@
 import React from "react";
-
 import "./style/home.css";
+import axios from "axios";
+
 import {
   Image,
   Stack,
@@ -18,6 +19,8 @@ import {
 import { BsGithub, BsLinkedin, BsMailbox, BsPhone } from "react-icons/bs";
 import { arrow } from "./style/theme";
 const profile = require("../componants/Assets/mypic1.png");
+
+
 const Home = () => {
   const imagestyle = {
     width: "90%",
@@ -27,7 +30,7 @@ const Home = () => {
   return (
     <>
       {" "}
-      <Stack id="home" h="100vh" mt={["-10px"]} w="100%" bg="white" pb={3}>
+      <Stack id="home" h="100vh" mt={["-10px"]} w="100%" bg="teal" pb={3}>
         <Flex
           m="auto"
           direction={["column", "column", "row"]}
@@ -45,8 +48,8 @@ const Home = () => {
             pl={"10%"}
           >
             <Box w={["30%", "25%", "30%", "20%"]} marginTop="30px">
-              <Flex gap={2} bg="white" p={1} align="center">
-                <Heading fontWeight="300" color="black">
+              <Flex gap={2} bg="teal" p={1} align="center">
+                <Heading fontWeight="300" color="white">
                   Hello
                 </Heading>
                 <Heading className="hand">👋</Heading>
