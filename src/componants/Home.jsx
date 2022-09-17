@@ -1,6 +1,8 @@
 import React from "react";
 import "./style/home.css";
 import axios from "axios";
+import { MdEmail } from "react-icons/md";
+import { BsTelephoneFill } from "react-icons/bs";
 
 import {
   Image,
@@ -85,7 +87,7 @@ const Home = () => {
                 href="https://github.com/RupeshSahu969"
                   target="_blank"
               >
-                <BsGithub className="icon" />
+                <BsGithub />
               </Link>
               <Link
                 className="iconlink"
@@ -97,7 +99,7 @@ const Home = () => {
                 href="https://www.linkedin.com/in/rupesh-sahu-4924a6119/"
                   target="_blank"
               >
-                <BsLinkedin className="icon" />
+                <BsLinkedin />
               </Link>
               <Link
                 className="iconlink"
@@ -110,7 +112,8 @@ const Home = () => {
                 
                   target="_blank"
               >
-                <BsPhone className="icon" />
+                {/* <BsPhone className="icon" /> */}
+                <BsTelephoneFill />
               </Link>
               <Link
                 className="iconlink"
@@ -122,7 +125,8 @@ const Home = () => {
                 href="mailto:rupeshsahu969@email.com?subject=subject&cc=supeshshau969@gmail.com"
                     target="_blank"
               >
-                <BsMailbox className="icon" />
+                {/* <BsMailbox className="icon" /> */}
+                <MdEmail  />
               </Link>
             </Flex>
           </Stack>

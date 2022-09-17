@@ -1,8 +1,8 @@
 /* #skillDiv {
 } */
 #skillDiv img {
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   transform: rotate(0deg);
   animation: rotate-vertical 5s ease-out infinite;
   font-size: 24px;
@@ -10,6 +10,7 @@
 #skillDiv p {
   font-weight: bold;
   color: #6f2232;
+  font-size: 24px;
 }
 @keyframes rotate-vertical {
   0% {

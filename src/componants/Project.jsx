@@ -48,7 +48,6 @@ const Project = () => {
         pt={"5%"}
         pb={"5%"}
       >
-        
         <Box w="60%" m="auto" className="card">
           <Stack w="100%" h={"370px"} style={cardStyle}>
             <Heading fontSize="150%">GeekkBuying - Clone</Heading>

@@ -11,6 +11,9 @@ const react = require("../componants/Assets/react.png");
 const redux = require("../componants/Assets/redux.png");
 const node = require("../componants/Assets/node.png");
 const chakra = require("../componants/Assets/chakra.png");
+const api3 =require("../componants/Assets/api3.png");
+const dsa=require("../componants/Assets/dsa.png");
+const git=require("../componants/Assets/git.png");
 const Skill = () => {
   return (
     <Box id="skill" pt={10} pb="10%">
@@ -65,6 +68,20 @@ const Skill = () => {
           <Image src={chakra} alt="Chakra-ui" />
           <Text>Chakra-UI</Text>
         </Box>
+        <Box>
+          <Image src={dsa} alt="dsa" />
+          <Text>DSA</Text>
+        </Box>
+        <Box>
+          <Image src={git} alt="git" />
+          <Text>GIT</Text>
+        </Box>
+        <Box>
+          <Image src={api3} alt="api3" />
+          <Text>API</Text>
+        </Box>
+        
+
       </SimpleGrid>
     </Box>
   );
