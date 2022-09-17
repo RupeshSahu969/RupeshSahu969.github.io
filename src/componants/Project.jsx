@@ -48,7 +48,8 @@ const Project = () => {
         pt={"5%"}
         pb={"5%"}
       >
-        <Box w="70%" m="auto" className="card">
+        
+        <Box w="60%" m="auto" className="card">
           <Stack w="100%" h={"370px"} style={cardStyle}>
             <Heading fontSize="150%">GeekkBuying - Clone</Heading>
             <Text>
@@ -80,7 +81,7 @@ const Project = () => {
               </Button>
             </Flex>
           </Stack>
-          <Box w="90%" h="330px" className="imageBox" style={imgcardstyle}>
+          <Box w="100%" h="330px" className="imageBox" style={imgcardstyle}>
             <Image
               src={nord}
               w="100%"
@@ -90,7 +91,7 @@ const Project = () => {
             />
           </Box>
         </Box>
-        <Box w="70%" m="auto" className="card">
+        <Box w="60%" m="auto" className="card">
           <Stack w="100%" h={"370px"} style={cardStyle}>
             <Heading fontSize="150%">Deccan Herald</Heading>
             <Text>
@@ -126,7 +127,7 @@ On Sports, Business, Technology, Entertainment
               </Button>
             </Flex>
           </Stack>
-          <Box w="90%" h="330px" className="imageBox" style={imgcardstyle}>
+          <Box w="100%" h="330px" className="imageBox" style={imgcardstyle}>
             <Image
               src={bestbuy}
               w="100%"
@@ -138,7 +139,7 @@ On Sports, Business, Technology, Entertainment
           </Box>
         </Box>
 
-        <Box w="70%" m="auto" className="card">
+        <Box w="60%" m="auto" className="card">
           <Stack w="100%" h={"370px"} style={cardStyle}>
             <Heading fontSize="150%">Quiz App</Heading>
             <Text>
@@ -171,7 +172,7 @@ On Sports, Business, Technology, Entertainment
               </Button>
             </Flex>
           </Stack>
-          <Box w="90%" h="330px" className="imageBox" style={imgcardstyle}>
+          <Box w="100%" h="330px" className="imageBox" style={imgcardstyle}>
             <Image
               src={quiz}
               w="100%"
@@ -182,7 +183,7 @@ On Sports, Business, Technology, Entertainment
           </Box>
         </Box>
 
-        <Box w="70%" m="auto" className="card">
+        <Box w="60%" m="auto" className="card">
           <Stack w="100%" h={"370px"} style={cardStyle}>
             <Heading fontSize="150%">Fab-Bag- Clone</Heading>
             <Text>
@@ -212,7 +213,7 @@ On Sports, Business, Technology, Entertainment
               </Button>
             </Flex>
           </Stack>
-          <Box w="90%" h="330px" className="imageBox" style={imgcardstyle}>
+          <Box w="100%" h="330px" className="imageBox" style={imgcardstyle}>
             <Image
               src={fabbag}
               w="100%"

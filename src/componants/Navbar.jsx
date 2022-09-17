@@ -3,6 +3,7 @@ import { IoIosRose } from "react-icons/io";
 import { SimpleGrid, Flex, Stack } from "@chakra-ui/react";
 import { Link } from "react-scroll";
 import "../componants/style/nav.css";
+
 const Navbar = () => {
   const [styletop, setstyletop] = useState("0");
   const navstyle = {

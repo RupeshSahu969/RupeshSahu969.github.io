@@ -64,14 +64,17 @@ const Home = () => {
               Full Stack Web Developer
             </Heading>
             <Flex align="center" gap={5}>
+              <a  href="Rupesh_Sahu_Resume.pdf" download="Rupesh_Sahu_Resume.pdf">
               <Button bg="pink" color="white">
-              <Link
+              {/* <Link
                   href="https://drive.google.com/file/d/1-fdqtMtcz7izTNbcICILJ5NyhWYB35y8/view?usp=sharing"
                   target="_blank"
                 >
-                Resume
-                </Link>
+                DownlodinCV
+                </Link> */}
+                DownlodinCV
               </Button>
+              </a>
               <Link
                 className="iconlink"
                 
