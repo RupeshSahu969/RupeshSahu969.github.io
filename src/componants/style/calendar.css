@@ -1,0 +1,53 @@
+.calendar {
+    width: 70%;
+    margin: auto;
+    margin-top: 70px;
+    
+}
+.calendar> div{
+    
+    display: flex;
+    gap: 30px;
+}
+.github1{
+    width: 70%;
+    margin: auto;
+    
+    margin-bottom: 50px;
+    margin-top: 100px;
+}
+.gittop1{
+    width: 90%;
+    margin: auto;
+margin-top: 100px;
+margin-bottom: 100px;
+}
+
+@media all and (max-width: 1000px) and (min-width: 550px) {
+    /* mobile-devices */
+    .calendar > div{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      
+    }
+    
+  }
+  @media all and (max-width: 549px) and (min-width: 313px) {
+    /* mobile-devices */
+    .calendar > div {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        
+      }
+    
+  }
+  @media all and (max-width: 299px) and (min-width: 100px) {
+    /* mobile-devices */
+    .calendar > div {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        
+      }
+    
+  }
+  

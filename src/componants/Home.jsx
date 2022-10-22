@@ -74,7 +74,7 @@ const Home = () => {
                 >
                 DownlodinCV
                 </Link> */}
-                DownlodinCV
+                DownloadingCV
               </Button>
               </a>
               <Link

@@ -7,6 +7,7 @@ import Project from "./Project.jsx";
 import Skill from "./Skill.jsx";
 import Navbar from "./Navbar.jsx";
 import { Skill1 } from "./Skill1.jsx";
+import Calendar from "./Calendar.jsx";
 
 const Main = () => {
   return (
@@ -19,6 +20,8 @@ const Main = () => {
         <Skill />
         <Skill1/>
         <Project />
+        <Calendar/>
+        
         <Contact />
         {/* <Footer/> */}
       </Box>
