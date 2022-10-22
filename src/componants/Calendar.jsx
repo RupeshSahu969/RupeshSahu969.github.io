@@ -14,6 +14,7 @@ const Calendar = () => {
         <Box style={arrow} bg="black"></Box>
       </Box>
         <div  className='github1'>
+            
       <GitHubCalendar
       style={{matrgin:"auto"}}
       username="rupeshsahu969"
