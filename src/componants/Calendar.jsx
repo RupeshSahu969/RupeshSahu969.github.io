@@ -16,10 +16,10 @@ const Calendar = () => {
         <div  className='github1'>
             
       <GitHubCalendar
-      style={{matrgin:"auto"}}
+      style={{margin:"auto"}}
       username="rupeshsahu969"
-      blockSize={20}
-      fontSize={20}
+       blockSize={20}
+      // fontSize={20}
       >
 
       </GitHubCalendar>
@@ -37,7 +37,7 @@ const Calendar = () => {
     </div>
     <div>
         
-<img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=rupeshsahu969&" alt="rupeshsahu969" />
+<img align="center"  src="https://github-readme-streak-stats.herokuapp.com/?user=rupeshsahu969&" alt="rupeshsahu969" />
 
     </div>
       </div>

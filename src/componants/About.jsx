@@ -62,7 +62,7 @@ const About = () => {
                {/* <h1 className='text text-center font-weight-bold'>Hello, I am Rupesh Sahu👋</h1> */}
                <div className="pro2">
                 <h4>I am Rupesh Sahu</h4>
-                 <p className='text text-center  my-5 h3  font' >
+                 <p>
                   <br/>
                  I'am Quick learner and an aspiring full-stack
              web developer with core knowledge of MERN stack technology.
