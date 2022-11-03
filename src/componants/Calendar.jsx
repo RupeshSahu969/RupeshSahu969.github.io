@@ -7,8 +7,8 @@ const Calendar = () => {
 
   return (
     <div className='gittop1'>
-        <Box m="auto" w={["50%", "25%", "30%", "15%"]}>
-        <Heading bg="black" fontWeight="300" color="white" p={1}>
+        <Box m="auto" w={["100%", "25%", "30%", "15%"]}>
+        <Heading bg="black"  color="white" p={1}>
           Github Calendar
         </Heading>
         <Box style={arrow} bg="black"></Box>

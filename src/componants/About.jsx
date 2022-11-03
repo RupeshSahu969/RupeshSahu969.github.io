@@ -64,9 +64,10 @@ const About = () => {
                 <h4>I am Rupesh Sahu</h4>
                  <p>
                   <br/>
-                 I'am Quick learner and an aspiring full-stack
-             web developer with core knowledge of MERN stack technology.
-              Looking forward to applying and enhancing my skills and knowledge as a developer 
+                 I am Quick learner and an aspiring full-stack
+                 web developer with core knowledge of MERN stack technology.
+                Looking forward to applying and enhancing my 
+                skills and knowledge as a developer 
 
                  </p>
                </div>

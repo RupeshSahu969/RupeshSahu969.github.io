@@ -44,7 +44,7 @@ const Project = () => {
         columns={[1, 1, 1, 1, 2]}
         align="center"
         justify="center"
-        spacingY={10}
+        spacingY={20}
         pt={"5%"}
         pb={"5%"}
       >
@@ -80,7 +80,7 @@ const Project = () => {
               </Button>
             </Flex>
           </Stack>
-          <Box w="100%" h="330px" className="imageBox" style={imgcardstyle}>
+          <Box w="100%" h="330px" className="imageBox">
             <Image
               src={nord}
               w="100%"
@@ -126,7 +126,7 @@ On Sports, Business, Technology, Entertainment
               </Button>
             </Flex>
           </Stack>
-          <Box w="100%" h="330px" className="imageBox" style={imgcardstyle}>
+          <Box w="100%" h="330px" className="imageBox">
             <Image
               src={bestbuy}
               w="100%"
@@ -171,7 +171,7 @@ On Sports, Business, Technology, Entertainment
               </Button>
             </Flex>
           </Stack>
-          <Box w="100%" h="330px" className="imageBox" style={imgcardstyle}>
+          <Box w="100%" h="330px" className="imageBox">
             <Image
               src={quiz}
               w="100%"
@@ -212,7 +212,7 @@ On Sports, Business, Technology, Entertainment
               </Button>
             </Flex>
           </Stack>
-          <Box w="100%" h="330px" className="imageBox" style={imgcardstyle}>
+          <Box w="100%" h="330px" className="imageBox">
             <Image
               src={fabbag}
               w="100%"

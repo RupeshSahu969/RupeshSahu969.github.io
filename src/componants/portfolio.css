@@ -242,7 +242,11 @@
   
   margin: auto;
 }.pro2> h4{
-  font-size: 30px;
+  font-size: 25px;
+  color: black;
+}
+.pro2> p{
+  font-size: 20px;
   color: black;
 }
 .profile>div>button>a:hover{

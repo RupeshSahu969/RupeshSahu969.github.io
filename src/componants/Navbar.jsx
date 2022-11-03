@@ -97,7 +97,7 @@ const Navbar = () => {
             justify="right"
             gap={9}
             fontWeight="bold"
-          >
+          > 
             <Link activeClass="active" smooth spy to="home">
               Home
             </Link>

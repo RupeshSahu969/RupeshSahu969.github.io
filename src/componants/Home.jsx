@@ -65,7 +65,7 @@ const Home = () => {
             <Heading fontSize="40px" color="black">
               Full Stack Web Developer
             </Heading>
-            <Flex align="center" gap={5}>
+            <Flex align="center" gap={2}>
               <a  href="Rupesh_Sahu_Resume.pdf" download="Rupesh_Sahu_Resume.pdf">
               <Button bg="pink" color="white">
               {/* <Link
