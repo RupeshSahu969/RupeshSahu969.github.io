@@ -12,14 +12,14 @@
   color: #6f2232;
   font-size: 24px;
 }
-@keyframes rotate-vertical {
+/* @keyframes rotate-vertical {
   0% {
     transform: rotateY(0deg);
   }
   100% {
     transform: rotateY(360deg);
   }
-}
+} */
 
 .skilltop{
   height: 500px;

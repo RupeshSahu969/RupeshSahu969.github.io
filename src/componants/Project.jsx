@@ -10,7 +10,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import React from "react";
-import "./style/project.css";
+// import "./style/project.css";
 import { arrow } from "./style/theme";
 
 import { FaTelegramPlane, FaGithub } from "react-icons/fa";
@@ -20,13 +20,13 @@ const fabbag = require("../componants/Assets/fabbag.png");
 const quiz = require("../componants/Assets/quiz.png");
 
 const cardStyle = {
-  borderRadius: "10px",
+  // borderRadius: "10px",
   // border: "1px Solid black",
   textAlign: "left",
   padding: "5%",
-  boxShadow: " #c3073f 0px 2px 4px 0px inset",
-  backgroundColor: "rgb(166,198,197,0.2)",
-  color: "#1A1A1D",
+  // boxShadow: " #c3073f 0px 2px 4px 0px inset",
+  // backgroundColor: "rgb(166,198,197,0.2)",
+  // color: "#1A1A1D",
 };
 const imgcardstyle = {
   marginTop: "-130px",
@@ -48,7 +48,7 @@ const Project = () => {
         pt={"5%"}
         pb={"5%"}
       >
-        <Box w="60%" m="auto" className="card">
+        <Box w="50%" m="auto" className="card">
           <Stack w="100%" h={"370px"} style={cardStyle}>
             <Heading fontSize="150%">GeekkBuying - Clone</Heading>
             <Text>
@@ -90,7 +90,7 @@ const Project = () => {
             />
           </Box>
         </Box>
-        <Box w="60%" m="auto" className="card">
+        <Box w="50%" m="auto" className="card">
           <Stack w="100%" h={"370px"} style={cardStyle}>
             <Heading fontSize="150%">Deccan Herald</Heading>
             <Text>
@@ -138,7 +138,7 @@ On Sports, Business, Technology, Entertainment
           </Box>
         </Box>
 
-        <Box w="60%" m="auto" className="card">
+        <Box w="50%" m="auto" className="card">
           <Stack w="100%" h={"370px"} style={cardStyle}>
             <Heading fontSize="150%">Quiz App</Heading>
             <Text>
@@ -182,7 +182,7 @@ On Sports, Business, Technology, Entertainment
           </Box>
         </Box>
 
-        <Box w="60%" m="auto" className="card">
+        <Box w="50%" m="auto" className="card">
           <Stack w="100%" h={"370px"} style={cardStyle}>
             <Heading fontSize="150%">Fab-Bag- Clone</Heading>
             <Text>
