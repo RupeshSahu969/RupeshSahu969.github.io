@@ -49,7 +49,16 @@ const Project = () => {
         pb={"5%"}
       >
         <Box w="50%" m="auto" className="card">
-          <Stack w="100%" h={"370px"} style={cardStyle}>
+        <Box w="100%" h="330px" className="imageBox">
+            <Image
+              src={nord}
+              w="100%"
+              h="100%"
+              objectFit="cover"
+              borderRadius="10px"
+            />
+          </Box>
+          <Stack w="100%"  style={cardStyle}>
             <Heading fontSize="150%">GeekkBuying - Clone</Heading>
             <Text>
               
@@ -80,18 +89,20 @@ const Project = () => {
               </Button>
             </Flex>
           </Stack>
-          <Box w="100%" h="330px" className="imageBox">
+          
+        </Box>
+        <Box w="50%" m="auto" className="card">
+        <Box w="100%" h="330px" className="imageBox">
             <Image
-              src={nord}
+              src={bestbuy}
               w="100%"
               h="100%"
+              pb="0"
               objectFit="cover"
               borderRadius="10px"
             />
           </Box>
-        </Box>
-        <Box w="50%" m="auto" className="card">
-          <Stack w="100%" h={"370px"} style={cardStyle}>
+          <Stack w="100%"  style={cardStyle}>
             <Heading fontSize="150%">Deccan Herald</Heading>
             <Text>
             Deccan Herald brings breaking news today’s Live News
@@ -126,20 +137,20 @@ On Sports, Business, Technology, Entertainment
               </Button>
             </Flex>
           </Stack>
-          <Box w="100%" h="330px" className="imageBox">
+          
+        </Box>
+
+        <Box w="50%" m="auto" className="card">
+        <Box w="100%" h="330px" className="imageBox">
             <Image
-              src={bestbuy}
+              src={quiz}
               w="100%"
               h="100%"
-              pb="0"
               objectFit="cover"
               borderRadius="10px"
             />
           </Box>
-        </Box>
-
-        <Box w="50%" m="auto" className="card">
-          <Stack w="100%" h={"370px"} style={cardStyle}>
+          <Stack w="100%"  style={cardStyle}>
             <Heading fontSize="150%">Quiz App</Heading>
             <Text>
               
@@ -171,19 +182,20 @@ On Sports, Business, Technology, Entertainment
               </Button>
             </Flex>
           </Stack>
-          <Box w="100%" h="330px" className="imageBox">
+          
+        </Box>
+
+        <Box w="50%" m="auto" className="card">
+        <Box w="100%" h="330px" className="imageBox">
             <Image
-              src={quiz}
+              src={fabbag}
               w="100%"
               h="100%"
               objectFit="cover"
               borderRadius="10px"
             />
           </Box>
-        </Box>
-
-        <Box w="50%" m="auto" className="card">
-          <Stack w="100%" h={"370px"} style={cardStyle}>
+          <Stack w="100%"  style={cardStyle}>
             <Heading fontSize="150%">Fab-Bag- Clone</Heading>
             <Text>
             Fab-Bag Website  is buying monthly subscrition of makupp  
@@ -212,15 +224,7 @@ On Sports, Business, Technology, Entertainment
               </Button>
             </Flex>
           </Stack>
-          <Box w="100%" h="330px" className="imageBox">
-            <Image
-              src={fabbag}
-              w="100%"
-              h="100%"
-              objectFit="cover"
-              borderRadius="10px"
-            />
-          </Box>
+          
         </Box>
         
       </SimpleGrid>
