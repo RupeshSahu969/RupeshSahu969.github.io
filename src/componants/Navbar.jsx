@@ -117,7 +117,7 @@ const Navbar = () => {
               Contact
             </Link>
             <a activeClass="active" smooth spy to="resume"
-                  href="https://drive.google.com/file/d/1-fdqtMtcz7izTNbcICILJ5NyhWYB35y8/view?usp=sharing"
+                 href="Rupesh-Sahu-Resume.pdf" download="Rupesh-Sahu-Resume.pdf"
                   target="_blank"
                 >
                 Resume

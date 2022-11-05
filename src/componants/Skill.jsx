@@ -14,6 +14,8 @@ const chakra = require("../componants/Assets/chakra.png");
 const api3 =require("../componants/Assets/api3.png");
 const dsa=require("../componants/Assets/dsa.png");
 const git=require("../componants/Assets/git.png");
+const vscode=require("../componants/Assets/vscode.png");
+const postman=require("../componants/Assets/postman.png");
 const Skill = () => {
   return (
     <Box id="skill" pt={10} pb="10%">
@@ -79,6 +81,14 @@ const Skill = () => {
         <Box>
           <Image src={api3} alt="api3" />
           <Text>API</Text>
+        </Box>
+        <Box>
+          <Image src={vscode} alt="api3" />
+          <Text>Vscode</Text>
+        </Box>
+        <Box>
+          <Image src={postman} alt="api3" />
+          <Text>Postman</Text>
         </Box>
         
 
