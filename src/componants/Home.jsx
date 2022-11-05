@@ -66,7 +66,7 @@ const Home = () => {
               Full Stack Web Developer
             </Heading>
             <Flex align="center" gap={2}>
-              <a  href="Rupesh_Sahu_Resume.pdf" download="Rupesh_Sahu_Resume.pdf">
+              <a  href="Rupesh-Sahu-Resume.pdf" download="Rupesh-Sahu-Resume.pdf">
               <Button bg="pink" color="white">
               {/* <Link
                   href="https://drive.google.com/file/d/1-fdqtMtcz7izTNbcICILJ5NyhWYB35y8/view?usp=sharing"
