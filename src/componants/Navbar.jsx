@@ -78,6 +78,9 @@ const Navbar = () => {
                 <Link activeClass="active1" smooth spy to="contact">
                   Contact
                 </Link>
+                {/* <Link activeClass="active1" smooth spy to="resume">
+                  Resume
+                </Link> */}
               </Flex>
             </SimpleGrid>
           </DrawerContent>
@@ -113,6 +116,12 @@ const Navbar = () => {
             <Link activeClass="active" smooth spy to="contact">
               Contact
             </Link>
+            <a activeClass="active" smooth spy to="resume"
+                  href="https://drive.google.com/file/d/1-fdqtMtcz7izTNbcICILJ5NyhWYB35y8/view?usp=sharing"
+                  target="_blank"
+                >
+                Resume
+                </a>
           </Flex>
         </SimpleGrid>
       </Show>

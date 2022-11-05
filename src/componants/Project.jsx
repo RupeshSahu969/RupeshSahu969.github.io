@@ -49,7 +49,7 @@ const Project = () => {
         pb={"5%"}
       >
         <Box w="50%" m="auto" className="card">
-        <Box w="100%" h="330px" className="imageBox">
+        <Box w="100%" h="280px" className="imageBox">
             <Image
               src={nord}
               w="100%"
@@ -92,7 +92,7 @@ const Project = () => {
           
         </Box>
         <Box w="50%" m="auto" className="card">
-        <Box w="100%" h="330px" className="imageBox">
+        <Box w="100%" h="280px" className="imageBox">
             <Image
               src={bestbuy}
               w="100%"
@@ -141,7 +141,7 @@ On Sports, Business, Technology, Entertainment
         </Box>
 
         <Box w="50%" m="auto" className="card">
-        <Box w="100%" h="330px" className="imageBox">
+        <Box w="100%" h="280px" className="imageBox">
             <Image
               src={quiz}
               w="100%"
@@ -186,7 +186,7 @@ On Sports, Business, Technology, Entertainment
         </Box>
 
         <Box w="50%" m="auto" className="card">
-        <Box w="100%" h="330px" className="imageBox">
+        <Box w="100%" h="300px" className="imageBox">
             <Image
               src={fabbag}
               w="100%"
