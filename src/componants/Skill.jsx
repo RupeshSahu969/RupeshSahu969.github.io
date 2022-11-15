@@ -21,7 +21,7 @@ const Skill = () => {
     <Box id="skill" pt={10} pb="10%">
       <Box m="auto" w={["50%", "25%", "30%", "15%"]}>
         <Heading bg="black" fontWeight="300" color="white" p={1}>
-          My Skills
+        Tech Skills
         </Heading>
         <Box style={arrow} bg="black"></Box>
       </Box>
@@ -74,22 +74,12 @@ const Skill = () => {
           <Image src={dsa} alt="dsa" />
           <Text>DSA</Text>
         </Box>
-        <Box>
-          <Image src={git} alt="git" />
-          <Text>GIT</Text>
-        </Box>
+        
         <Box>
           <Image src={api3} alt="api3" />
           <Text>API</Text>
         </Box>
-        <Box>
-          <Image src={vscode} alt="api3" />
-          <Text>Vscode</Text>
-        </Box>
-        <Box>
-          <Image src={postman} alt="api3" />
-          <Text>Postman</Text>
-        </Box>
+       
         
 
       </SimpleGrid>

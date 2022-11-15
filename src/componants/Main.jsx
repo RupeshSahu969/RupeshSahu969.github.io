@@ -8,7 +8,7 @@ import Skill from "./Skill.jsx";
 import Navbar from "./Navbar.jsx";
 import { Skill1 } from "./Skill1.jsx";
 import Calendar from "./Calendar.jsx";
-
+import Tooles from "./Tooles"
 const Main = () => {
   return (
     <Stack>
@@ -19,6 +19,7 @@ const Main = () => {
         {/* <Profile/> */}
         <Skill />
         <Skill1/>
+        <Tooles/>
         <Project />
         <Calendar/>
         
