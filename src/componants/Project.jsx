@@ -18,6 +18,8 @@ const nord = require("../componants/Assets/geek.png");
 const bestbuy = require("../componants/Assets/news.png");
 const fabbag = require("../componants/Assets/fabbag.png");
 const quiz = require("../componants/Assets/quiz.png");
+const tata = require("../componants/Assets/tata.png");
+const timet = require("../componants/Assets/timet.png");
 
 const cardStyle = {
   // borderRadius: "10px",
@@ -48,6 +50,100 @@ const Project = () => {
         pt={"5%"}
         pb={"5%"}
       >
+
+        <Box w="50%" m="auto" className="card">
+        <Box w="100%" h="280px" className="imageBox">
+            <Image
+              src={tata}
+              w="100%"
+              h="100%"
+              objectFit="cover"
+              borderRadius="10px"
+            />
+          </Box>
+          <Stack w="100%"  style={cardStyle}>
+            <Heading fontSize="150%">TATA 1mg</Heading>
+            <Text>
+              
+            online platform, which can be accessed for all your health needs.India’s 
+            leading digital consumer healthcare platform
+            
+            </Text>
+            <Text>An Group Project ,Executed in 4 days.</Text>
+            <Text>Tech Skill used : HTML | CSS |  React | Redux | Axios |MongoDB| NodeJs| Express |</Text>
+            <Flex gap={3} align="center">
+              <Button size="xs" colorScheme="green">
+                <Link
+                  href="https://github.com/sonuprasad66/omniscient-sheet-6598"
+                  target="_blank"
+                >
+                  <Flex align="center" gap={2}>
+                    <Text> Code</Text>
+                    <FaGithub />
+                  </Flex>
+                </Link>
+              </Button>
+              <Button size="xs" colorScheme="red">
+                <Link href="https://tata-1mg-clone-sage.vercel.app/" target="_blank">
+                  <Flex align="center" gap={2}>
+                    <Text>Live</Text>
+                    <FaTelegramPlane />
+                  </Flex>
+                </Link>
+              </Button>
+            </Flex>
+          </Stack>
+          
+        </Box>
+
+        <Box w="50%" m="auto" className="card">
+        <Box w="100%" h="280px" className="imageBox">
+            <Image
+              src={timet}
+              w="100%"
+              h="100%"
+              pb="0"
+              objectFit="cover"
+              borderRadius="10px"
+            />
+          </Box>
+          <Stack w="100%"  style={cardStyle}>
+            <Heading fontSize="150%">Time Tracking</Heading>
+            <Text>
+            Time tracker Clockify is a time tracker and timesheet app that lets you track work hours across projects. 
+            </Text>
+            <Text>
+            An Group Project ,Executed in 4 days.
+            </Text>
+            <Text>Tech Skill used : HTML | CSS | JavaScript | React |Redux | Axios | JSON API</Text>
+            <Flex gap={3} align="center">
+              <Button size="xs" colorScheme="green">
+                <Link
+                  href="https://github.com/RupeshSahu969/equable-pleasure-9638"
+                  target="_blank"
+                >
+                  <Flex align="center" gap={2}>
+                    <Text> Code</Text>
+                    <FaGithub />
+                  </Flex>
+                </Link>
+              </Button>
+              <Button size="xs" colorScheme="red">
+                <Link
+                  href="https://timetracker-4jrwp56fe-rupeshsahu969.vercel.app/"
+                  target="_blank"
+                >
+                  <Flex align="center" gap={2}>
+                    <Text>Live</Text>
+                    <FaTelegramPlane />
+                  </Flex>
+                </Link>
+              </Button>
+            </Flex>
+          </Stack>
+          
+        </Box>
+
         <Box w="50%" m="auto" className="card">
         <Box w="100%" h="280px" className="imageBox">
             <Image
@@ -91,31 +187,28 @@ const Project = () => {
           </Stack>
           
         </Box>
+        
         <Box w="50%" m="auto" className="card">
-        <Box w="100%" h="280px" className="imageBox">
+        <Box w="100%" h="300px" className="imageBox">
             <Image
-              src={bestbuy}
+              src={fabbag}
               w="100%"
               h="100%"
-              pb="0"
               objectFit="cover"
               borderRadius="10px"
             />
           </Box>
           <Stack w="100%"  style={cardStyle}>
-            <Heading fontSize="150%">Deccan Herald</Heading>
+            <Heading fontSize="150%">Fab-Bag- Clone</Heading>
             <Text>
-            Deccan Herald brings breaking news today’s Live News
-On Sports, Business, Technology, Entertainment
-            </Text>
-            <Text>
-            Individual Project
-            </Text>
-            <Text>Tech Skill used : HTML | CSS | JavaScript | React | Axios | JSON API</Text>
+            Fab-Bag Website  is buying monthly subscrition of makupp  
+                        </Text>
+            <Text>An Group Project ,Executed in 5 days.</Text>
+            <Text>Tech Skill used : HTML | CSS| Bootstrap | JavaScript</Text>
             <Flex gap={3} align="center">
               <Button size="xs" colorScheme="green">
                 <Link
-                  href="https://github.com/RupeshSahu969/Deccan-Herald-"
+                  href="https://github.com/mdnasirdmt/fab-bag-clone-again"
                   target="_blank"
                 >
                   <Flex align="center" gap={2}>
@@ -125,10 +218,7 @@ On Sports, Business, Technology, Entertainment
                 </Link>
               </Button>
               <Button size="xs" colorScheme="red">
-                <Link
-                  href="https://deccannews-51i0xzhrs-rupeshsahu969.vercel.app/"
-                  target="_blank"
-                >
+                <Link href="https://fantastic-squirrel-8ca900.netlify.app/" target="_blank">
                   <Flex align="center" gap={2}>
                     <Text>Live</Text>
                     <FaTelegramPlane />
@@ -185,48 +275,11 @@ On Sports, Business, Technology, Entertainment
           
         </Box>
 
-        <Box w="50%" m="auto" className="card">
-        <Box w="100%" h="300px" className="imageBox">
-            <Image
-              src={fabbag}
-              w="100%"
-              h="100%"
-              objectFit="cover"
-              borderRadius="10px"
-            />
-          </Box>
-          <Stack w="100%"  style={cardStyle}>
-            <Heading fontSize="150%">Fab-Bag- Clone</Heading>
-            <Text>
-            Fab-Bag Website  is buying monthly subscrition of makupp  
-                        </Text>
-            <Text>An Group Project ,Executed in 5 days.</Text>
-            <Text>Tech Skill used : HTML | CSS| Bootstrap | JavaScript</Text>
-            <Flex gap={3} align="center">
-              <Button size="xs" colorScheme="green">
-                <Link
-                  href="https://github.com/mdnasirdmt/fab-bag-clone-again"
-                  target="_blank"
-                >
-                  <Flex align="center" gap={2}>
-                    <Text> Code</Text>
-                    <FaGithub />
-                  </Flex>
-                </Link>
-              </Button>
-              <Button size="xs" colorScheme="red">
-                <Link href="https://fantastic-squirrel-8ca900.netlify.app/" target="_blank">
-                  <Flex align="center" gap={2}>
-                    <Text>Live</Text>
-                    <FaTelegramPlane />
-                  </Flex>
-                </Link>
-              </Button>
-            </Flex>
-          </Stack>
-          
-        </Box>
         
+        
+        
+
+
       </SimpleGrid>
     </Box>
   );
