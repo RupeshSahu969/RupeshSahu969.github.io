@@ -22,7 +22,6 @@ import { BsGithub, BsLinkedin, BsMailbox, BsPhone } from "react-icons/bs";
 import { arrow } from "./style/theme";
 const profile = require("../componants/Assets/mypic1.png");
 
-
 const Home = () => {
   const imagestyle = {
     width: "90%",
@@ -32,7 +31,14 @@ const Home = () => {
   return (
     <>
       {" "}
-      <Stack id="home" h="100vh" mt={["-10px"]} w="100%" bg="teal" pb={3}>
+      <Stack
+        id="home"
+        mt={["-10px"]}
+        w="100%"
+        h={{ base: "600px", md: "100vh" }}
+        bg="teal"
+        pb={3}
+      >
         <Flex
           m="auto"
           direction={["column", "column", "row"]}
@@ -63,70 +69,58 @@ const Home = () => {
               I'm Rupesh Sahu
             </Heading>
             <Heading fontSize="40px" color="black">
-              Full Stack Web Developer
+              FrontEnd Web Developer
             </Heading>
             <Flex align="center" gap={2}>
-              <a  href="Rupesh-Sahu-Resume.pdf" download="Rupesh-Sahu-Resume.pdf">
-              <Button bg="pink" color="white">
-              {/* <Link
-                  href="https://drive.google.com/file/d/1-fdqtMtcz7izTNbcICILJ5NyhWYB35y8/view?usp=sharing"
-                  target="_blank"
-                >
-                DownlodinCV
-                </Link> */}
-                DownloadingCV
-              </Button>
+              <a
+                href="Rupesh-Sahu-Resume.pdf"
+                download="Rupesh-Sahu-Resume.pdf"
+              >
+                <Button bg="pink" color="white">
+                  DownloadCV
+                </Button>
               </a>
               <Link
                 className="iconlink"
-                
                 borderRadius="50%"
                 border="1px solid black"
                 fontSize="30px"
-                
                 href="https://github.com/RupeshSahu969"
-                  target="_blank"
+                target="_blank"
               >
                 <BsGithub />
               </Link>
               <Link
                 className="iconlink"
-            
                 borderRadius="50%"
                 border="1px solid black"
                 fontSize="30px"
-                
                 href="https://www.linkedin.com/in/rupesh-sahu-4924a6119/"
-                  target="_blank"
+                target="_blank"
               >
                 <BsLinkedin />
               </Link>
               <Link
                 className="iconlink"
-                
                 borderRadius="50%"
                 border="1px solid black"
                 fontSize="30px"
-                
                 href="tel:8103490175"
-                
-                  target="_blank"
+                target="_blank"
               >
                 {/* <BsPhone className="icon" /> */}
                 <BsTelephoneFill />
               </Link>
               <Link
                 className="iconlink"
-                
                 borderRadius="50%"
                 border="1px solid black"
                 fontSize="30px"
-                
                 href="mailto:rupeshsahu969@email.com?subject=subject&cc=supeshshau969@gmail.com"
-                    target="_blank"
+                target="_blank"
               >
                 {/* <BsMailbox className="icon" /> */}
-                <MdEmail  />
+                <MdEmail />
               </Link>
             </Flex>
           </Stack>
@@ -136,16 +130,6 @@ const Home = () => {
             align="center"
             pt={3}
           >
-            {/* <Image
-            marginTop="50%"
-              borderRadius="full"
-              boxSize='200px'
-              src={profile}
-              // w={["30%"]}
-              // h={["30%"]}
-              // mt={["5%", "5%"]}
-              bg="#B0B8B4FF"
-            /> */}
           </Box>
         </Flex>
       </Stack>

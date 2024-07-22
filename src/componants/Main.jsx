@@ -8,23 +8,23 @@ import Skill from "./Skill.jsx";
 import Navbar from "./Navbar.jsx";
 import { Skill1 } from "./Skill1.jsx";
 import Calendar from "./Calendar.jsx";
-import Tooles from "./Tooles"
+import Tooles from "./Tooles";
 const Main = () => {
+  
   return (
     <Stack>
-      <Navbar />
+      <Box position="fixed" zIndex="1" w="100%" height="5rem">
+        <Navbar />
+      </Box>
       <Box>
         <Home />
         <About />
-        {/* <Profile/> */}
         <Skill />
-        <Skill1/>
-        <Tooles/>
+        <Skill1 />
+        <Tooles />
         <Project />
-        <Calendar/>
-        
+        <Calendar />
         <Contact />
-        {/* <Footer/> */}
       </Box>
     </Stack>
   );

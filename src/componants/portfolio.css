@@ -47,29 +47,26 @@
 .card > a:hover {
   background-color: #bfd626;
 }
-.dev1{
+.dev1 {
   margin-top: 30px;
-  
 }
 /* .dev2{
   margin-top: 55px;
   
 } */
-.dev3{
+.dev3 {
   margin-top: 40px;
-  
 }
-.dev4{
+.dev4 {
   margin-top: 20px;
-  
 }
 .box {
   display: flex;
   justify-content: center;
-  width:80%;
-  
-  margin:auto;
-  padding:1rem 0;
+  width: 80%;
+
+  margin: auto;
+  padding: 1rem 0;
   /* box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
 }
 .box > div {
@@ -97,8 +94,6 @@
     rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
     rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
-
-
 
 .container > button {
   position: relative;
@@ -170,63 +165,58 @@
     5px 5px 15px 5px rgba(0, 0, 0, 0), 5px 5px 15px 5px rgba(241, 255, 235, 0);
   box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000,
     5px 5px 15px 5px rgba(0, 0, 0, 0), 5px 5px 15px 5px rgba(241, 255, 235, 0);
-
 }
-.profile{
+.profile {
   margin-top: 40px;
 }
 
-.profile>div>div>p{
-
+.profile > div > div > p {
   font-size: 1.2rem;
 }
-.profile>div>button>a{
-
+.profile > div > button > a {
   font-size: 1.5rem;
 }
-.pro3{
+.pro3 {
   display: flex;
-  
 }
-.pro3 >div{
+.pro3 > div {
   margin-top: 20px;
   margin: 10px;
 }
-.profile> h3{
-   background-color: #000000;
-   color: white;
+.profile > h3 {
+  background-color: #000000;
+  color: white;
   font-size: 30px;
   width: 200px;
   height: 50px;
   margin: auto;
 }
-.pro1{
-  display:  flex;
+.pro1 {
+  display: flex;
   width: 80%;
   /* height: 500px; */
-  
+
   margin: auto;
   margin-top: 50px;
   /* border: 1px solid black; */
 }
-.home1{
+.home1 {
   display: flex;
   width: 80%;
   margin: auto;
   margin-top: 50px;
   border: 1px solid black;
 }
-.home1>div > h1{
+.home1 > div > h1 {
   font-size: 40px;
 }
 
-.home1>div > h2{
+.home1 > div > h2 {
   font-size: 40px;
   margin-left: 200px;
 }
 
-.pro1> div > p{
-  
+.pro1 > div > p {
   margin-top: 30px;
 }
 .pro1 > div {
@@ -237,47 +227,50 @@
   margin: auto;
   /* border: 1px solid black */
 }
-.pro2{
+.pro2 {
   width: 60%;
-  
+
   margin: auto;
-}.pro2> h4{
+}
+.pro2 > h4 {
   font-size: 25px;
   color: black;
 }
-.pro2> p{
+.pro2 > p {
   font-size: 20px;
+  text-align: start;
   color: black;
 }
-.profile>div>button>a:hover{
+.profile > div > button > a:hover {
   -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000,
-  5px 5px 15px 5px rgba(0, 0, 0, 0), 5px 5px 15px 5px rgba(241, 255, 235, 0);
-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000,
-  5px 5px 15px 5px rgba(0, 0, 0, 0), 5px 5px 15px 5px rgba(241, 255, 235, 0);
-} 
+    5px 5px 15px 5px rgba(0, 0, 0, 0), 5px 5px 15px 5px rgba(241, 255, 235, 0);
+  box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0), 5px 5px 15px 5px rgba(241, 255, 235, 0);
+}
 @media all and (max-width: 1000px) and (min-width: 450px) {
   /* mobile-devices */
   .pro1 {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    
+    margin: auto;
   }
-  
 }
 @media all and (max-width: 449px) and (min-width: 300px) {
   /* mobile-devices */
   .pro1 {
+    width: 100%;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    
   }
-  
 }
 @media all and (max-width: 299px) and (min-width: 100px) {
   /* mobile-devices */
   .pro1 {
+    width: 100%;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
-  
 }

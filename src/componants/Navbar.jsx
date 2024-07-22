@@ -16,15 +16,16 @@ import {
 import { MdMenu } from "react-icons/md";
 import { Link } from "react-scroll";
 import "../componants/style/nav.css";
+
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   const [styletop, setstyletop] = useState("0");
   const navstyle = {
-    position: "fixed",
+    // position: "fixed",
     top: styletop,
-    display: "block",
-    transition: "top 0.3s",
+    // display: "block",
+    // transition: "top 0.3s",
     width: "100%",
   };
   const prevPos = window.pageYOffset;
@@ -39,7 +40,7 @@ const Navbar = () => {
   };
 
   return (
-    <Stack style={navstyle} bg="rgb(0,0,0,0.4)" p={2} color="black">
+    <Stack zIndex="1" style={navstyle} bg="rgb(0,0,0,0.4)" p={2} color="black">
       <Show below="lg">
         <MdMenu ref={btnRef} onClick={onOpen} fontSize="25px" />
         <Drawer
@@ -78,9 +79,6 @@ const Navbar = () => {
                 <Link activeClass="active1" smooth spy to="contact">
                   Contact
                 </Link>
-                {/* <Link activeClass="active1" smooth spy to="resume">
-                  Resume
-                </Link> */}
               </Flex>
             </SimpleGrid>
           </DrawerContent>
@@ -100,7 +98,7 @@ const Navbar = () => {
             justify="right"
             gap={9}
             fontWeight="bold"
-          > 
+          >
             <Link activeClass="active" smooth spy to="home">
               Home
             </Link>
@@ -116,12 +114,17 @@ const Navbar = () => {
             <Link activeClass="active" smooth spy to="contact">
               Contact
             </Link>
-            <a activeClass="active" smooth spy to="resume"
-                 href="Rupesh-Sahu-Resume.pdf" download="Rupesh-Sahu-Resume.pdf"
-                  target="_blank"
-                >
-                Resume
-                </a>
+            <a
+              activeClass="active"
+              smooth
+              spy
+              to="resume"
+              href="Rupesh-Sahu-Resume.pdf"
+              download="Rupesh-Sahu-Resume.pdf"
+              target="_blank"
+            >
+              Resume
+            </a>
           </Flex>
         </SimpleGrid>
       </Show>
