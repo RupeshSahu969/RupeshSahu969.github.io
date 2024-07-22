@@ -10,6 +10,7 @@ const About = () => {
         <div className="container-fluid  p-5  ">
           <div className="row  profile m-4 p-2">
             <h3>About Me</h3>
+            
             <div className="pro1">
               <div>
                 <Fade>
