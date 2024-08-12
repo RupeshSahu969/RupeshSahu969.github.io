@@ -73,8 +73,8 @@ const Home = () => {
             </Heading>
             <Flex align="center" gap={2}>
               <a
-                href="Rupesh-Sahu-Resume.pdf"
-                download="Rupesh-Sahu-Resume.pdf"
+                href="Rupesh-Sahu.pdf"
+                download="Rupesh-Sahu.pdf"
               >
                 <Button bg="pink" color="white">
                   DownloadCV
@@ -129,8 +129,7 @@ const Home = () => {
             h="100%"
             align="center"
             pt={3}
-          >
-          </Box>
+          ></Box>
         </Flex>
       </Stack>
     </>

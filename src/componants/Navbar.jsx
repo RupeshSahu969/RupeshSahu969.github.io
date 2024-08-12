@@ -119,8 +119,8 @@ const Navbar = () => {
               smooth
               spy
               to="resume"
-              href="Rupesh-Sahu-Resume.pdf"
-              download="Rupesh-Sahu-Resume.pdf"
+              href="Rupesh-Sahu.pdf"
+              download="Rupesh-Sahu.pdf"
               target="_blank"
             >
               Resume
