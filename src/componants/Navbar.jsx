@@ -114,7 +114,7 @@ const Navbar = () => {
             <Link activeClass="active" smooth spy to="contact">
               Contact
             </Link>
-            <a
+            {/* <a
               activeClass="active"
               smooth
               spy
@@ -124,7 +124,7 @@ const Navbar = () => {
               target="_blank"
             >
               Resume
-            </a>
+            </a> */}
           </Flex>
         </SimpleGrid>
       </Show>
