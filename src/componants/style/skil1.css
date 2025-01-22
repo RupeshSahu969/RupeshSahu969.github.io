@@ -1,0 +1,49 @@
+/* General Styling */
+.skilltop {
+    text-align: center;
+    margin: 50px auto;
+  }
+  
+  .skilltop h1 {
+    font-size: 35px;
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  /* Skill Container */
+  .skill1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  .str1 h3 {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #6f2232;
+    transition: transform 0.3s, color 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  /* Hover Effect */
+  .str1:hover h3 {
+    transform: scale(1.2); /* Make the text grow */
+    color: #ff6347; /* Change color on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .skill1 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .skill1 {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  

@@ -10,7 +10,7 @@ const About = () => {
         <div className="container-fluid  p-5  ">
           <div className="row  profile m-4 p-2">
             <h3>About Me</h3>
-            
+
             <div className="pro1">
               <div>
                 <Fade>
@@ -19,6 +19,7 @@ const About = () => {
                       src={mypic1}
                       alt="mypic1"
                       style={{
+                        marginTop:"10px",
                         width: "800px",
                         borderRadius: "20px",
                         boxShadow:
@@ -35,15 +36,14 @@ const About = () => {
                     <div className="pro2">
                       <h4>I am Rupesh Sahu</h4>
                       <p>
-                        <br />I am a passionate and skilled front-end web
-                        developer with extensive professional experience. I
-                        craft intuitive, responsive, and engaging user
-                        interfaces using the latest web technologies. I have
-                        strong expertise in frontend development, skilled in
-                        building and maintaining web applications with a focus
-                        on performance and user experience. Additionally, I am
-                        proficient in web technologies, with deep knowledge of
-                        HTML, CSS, JavaScript, React, Redux, and React Native.
+                        <br />
+                        Experienced Frontend Developer with a strong background
+                        in creating dynamic,responsive web applications using
+                        HTML, CSS, JavaScript, ReactJS, and Redux. Expert at
+                        building user-friendly interfaces and integrating APIs
+                        for smooth, efficient user experiences. Proven ability
+                        to collaborate with teams and deliver innovative,
+                        scalable solutions
                       </p>
                     </div>
                     {/*  */}

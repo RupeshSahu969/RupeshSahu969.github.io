@@ -11,17 +11,17 @@ const react = require("../componants/Assets/react.png");
 const redux = require("../componants/Assets/redux.png");
 const node = require("../componants/Assets/node.png");
 const chakra = require("../componants/Assets/chakra.png");
-const api3 =require("../componants/Assets/api3.png");
-const dsa=require("../componants/Assets/dsa.png");
-const git=require("../componants/Assets/git.png");
-const vscode=require("../componants/Assets/vscode.png");
-const postman=require("../componants/Assets/postman.png");
+const api3 = require("../componants/Assets/api3.png");
+const dsa = require("../componants/Assets/dsa.png");
+const git = require("../componants/Assets/git.png");
+const vscode = require("../componants/Assets/vscode.png");
+const postman = require("../componants/Assets/postman.png");
 const Skill = () => {
   return (
     <Box id="skill" pt={10} pb="10%">
       <Box m="auto" w={["50%", "25%", "30%", "15%"]}>
         <Heading bg="black" fontWeight="300" color="white" p={1}>
-        Tech Skills
+          Tech Skills
         </Heading>
         <Box style={arrow} bg="black"></Box>
       </Box>
@@ -74,14 +74,11 @@ const Skill = () => {
           <Image src={dsa} alt="dsa" />
           <Text>DSA</Text>
         </Box>
-        
+
         <Box>
           <Image src={api3} alt="api3" />
           <Text>API</Text>
         </Box>
-       
-        
-
       </SimpleGrid>
     </Box>
   );
