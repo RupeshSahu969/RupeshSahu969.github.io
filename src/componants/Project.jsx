@@ -12,7 +12,7 @@ import {
 import React from "react";
 // import "./style/project.css";
 import { arrow } from "./style/theme";
-
+import food from "./Assets/foodimages.png"
 import { FaTelegramPlane, FaGithub } from "react-icons/fa";
 const nord = require("../componants/Assets/geek.png");
 const bestbuy = require("../componants/Assets/news.png");
@@ -20,8 +20,9 @@ const fabbag = require("../componants/Assets/fabbag.png");
 const quiz = require("../componants/Assets/quiz.png");
 const tata = require("../componants/Assets/tata.png");
 const timet = require("../componants/Assets/timet.png");
-const horse= require("../componants/Assets/horse.png")
-const cg= require("../componants/Assets/cg.png")
+const horse= require("../componants/Assets/horse.png");
+const cg= require("../componants/Assets/cg.png");
+
 const popart1= require("../componants/Assets/popart1.png")
 
 const cardStyle = {
@@ -242,7 +243,7 @@ const Project = () => {
         <Box w="50%" m="auto" className="card">
           <Box w="100%" h="280px" className="imageBox">
             <Image
-              src={quiz}
+              src={food}
               w="100%"
               h="100%"
               objectFit="cover"
@@ -250,15 +251,15 @@ const Project = () => {
             />
           </Box>
           <Stack w="100%" style={cardStyle}>
-            <Heading fontSize="150%">Quiz App</Heading>
+            <Heading fontSize="150%">Food Delivery Application</Heading>
             <Text>
-              Basic Quiz app to test your computer knowledge Also the question
-              and its optins changed in every pages reload
+            food ordering experience for users. It includes dynamic product displays, an optimized ordering system, and a well-structured backend to manage data efficiently.
             </Text>
-            <Text>Simple Project.</Text>
-            <Text>Tech Skill used : HTML5 | CSS3| Bootstrap | JavaScript</Text>
+            {/* <Text>Simple Project.</Text> */}
+            <Text>Tech Skill used : HTML | CSS | React | Redux | Axios |MongoDB|
+            NodeJs| Express </Text>
             <Flex gap={3} align="center">
-              <Button size="xs" colorScheme="green">
+              {/* <Button size="xs" colorScheme="green">
                 <Link
                   href="https://github.com/RupeshSahu969/QuizzApp-javasccript"
                   target="_blank"
@@ -279,7 +280,7 @@ const Project = () => {
                     <FaTelegramPlane />
                   </Flex>
                 </Link>
-              </Button>
+              </Button> */}
             </Flex>
           </Stack>
         </Box>
@@ -409,7 +410,50 @@ const Project = () => {
             </Flex>
           </Stack>
         </Box>
-        
+        <Box w="50%" m="auto" className="card">
+          <Box w="100%" h="280px" className="imageBox">
+            <Image
+              src={quiz}
+              w="100%"
+              h="100%"
+              objectFit="cover"
+              borderRadius="10px"
+            />
+          </Box>
+          <Stack w="100%" style={cardStyle}>
+            <Heading fontSize="150%">Quiz App</Heading>
+            <Text>
+              Basic Quiz app to test your computer knowledge Also the question
+              and its optins changed in every pages reload
+            </Text>
+            <Text>Simple Project.</Text>
+            <Text>Tech Skill used : HTML5 | CSS3| Bootstrap | JavaScript</Text>
+            <Flex gap={3} align="center">
+              <Button size="xs" colorScheme="green">
+                <Link
+                  href="https://github.com/RupeshSahu969/QuizzApp-javasccript"
+                  target="_blank"
+                >
+                  <Flex align="center" gap={2}>
+                    <Text> Code</Text>
+                    <FaGithub />
+                  </Flex>
+                </Link>
+              </Button>
+              <Button size="xs" colorScheme="red">
+                <Link
+                  href="https://lively-kleicha-dca27e.netlify.app/"
+                  target="_blank"
+                >
+                  <Flex align="center" gap={2}>
+                    <Text>Live</Text>
+                    <FaTelegramPlane />
+                  </Flex>
+                </Link>
+              </Button>
+            </Flex>
+          </Stack>
+        </Box>
       </SimpleGrid>
     </Box>
   );
