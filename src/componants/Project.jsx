@@ -22,9 +22,10 @@ const tata = require("../componants/Assets/tata.png");
 const timet = require("../componants/Assets/timet.png");
 const horse= require("../componants/Assets/horse.png");
 const cg= require("../componants/Assets/cg.png");
-const dashboard= require("../componants/Assets/dashboard1.png");
+const hospital= require("../componants/Assets/hospital.png");
+const dashboard= require("../componants/Assets/tyre_management.png");
 const popart1= require("../componants/Assets/popart1.png")
-
+const smegrid= require("../componants/Assets/smegridpro1.png")
 const cardStyle = {
   // borderRadius: "10px",
   // border: "1px Solid black",
@@ -57,6 +58,135 @@ const Project = () => {
         // pr={"100px"}
       >
 
+<Box w="50%" m="auto" className="card">
+          <Box w="100%" h="280px" className="imageBox">
+            <Image
+              src={smegrid}
+              w="100%"
+              h="100%"
+              objectFit="cover"
+              borderRadius="10px"
+            />
+          </Box>
+          <Stack w="100%" style={cardStyle}>
+            <Heading fontSize="150%">Smegrid </Heading>
+            <Text>
+            We are on a mission to empower manufacturers and industrial businesses with smarter procurement, efficient waste management, and skilled workforce solutions
+            </Text>
+            {/* <Text>Simple Project.</Text> */}
+            <Text>Tech Skill used : HTML | CSS | React | Redux | Axios |MongoDB|
+            NodeJs| Express </Text>
+            <Flex gap={3} align="center">
+              <Button size="xs" colorScheme="green">
+                <Link
+                  href="https://jazzy-paprenjak-6ea51f.netlify.app/"
+                  target="_blank"
+                >
+                  <Flex align="center" gap={2}>
+                    <Text> Code</Text>
+                    <FaGithub />
+                  </Flex>
+                </Link>
+              </Button>
+              <Button size="xs" colorScheme="red">
+                <Link
+                  href="https://jazzy-paprenjak-6ea51f.netlify.app/"
+                  target="_blank"
+                >
+                  <Flex align="center" gap={2}>
+                    <Text>Live</Text>
+                    <FaTelegramPlane />
+                  </Flex>
+                </Link>
+              </Button>
+            </Flex>
+          </Stack>
+        </Box>
+
+ <Box w="50%" m="auto" className="card">
+          <Box w="100%" h="300px" className="imageBox">
+            <Image
+              src={dashboard}
+              w="100%"
+              h="100%"
+              objectFit="cover"
+              borderRadius="10px"
+            />
+          </Box>
+        <Stack w="100%" style={cardStyle}>
+            <Heading fontSize="150%"> Tyre Management(ERP)</Heading>
+            <Text> 
+            The system allowed various types of users (Master Admin, Side Admin, and User Admin) to have access to different sets of features, based on their roles and permissions.</Text>
+            
+            <Text>Tech Skill used : HTML5 | CSS3| Bootstrap | JavaScript | React  </Text>
+            <Flex gap={3} align="center">
+              <Button size="xs" colorScheme="green">
+                <Link
+                  href="/"
+                  target="_blank"
+                >
+                  <Flex align="center" gap={2}>
+                    <Text> Code</Text>
+                    <FaGithub />
+                  </Flex>
+                </Link>
+              </Button>
+              <Button size="xs" colorScheme="red">
+                <Link
+                  href="https://suryakirangroup.in/login"
+                  target="_blank"
+                >
+                  <Flex align="center" gap={2}>
+                    <Text>Live</Text>
+                    <FaTelegramPlane />
+                  </Flex>
+                </Link>
+              </Button>
+            </Flex>
+          </Stack>
+        </Box>
+
+ <Box w="50%" m="auto" className="card">
+          <Box w="100%" h="300px" className="imageBox">
+            <Image
+              src={cg}
+              w="100%"
+              h="100%"
+              objectFit="cover"
+              borderRadius="10px"
+            />
+          </Box>
+        <Stack w="100%" style={cardStyle}>
+            <Heading fontSize="150%"> Incredible Chattisgarh</Heading>
+            <Text> Incredible Chattisgarh</Text>
+            <Text>Simple Project.</Text>
+            <Text>Tech Skill used : HTML5 | CSS3| Bootstrap | JavaScript  </Text>
+            <Flex gap={3} align="center">
+              <Button size="xs" colorScheme="green">
+                <Link
+                  href="https://github.com/RupeshSahu969/Incredible_Chattisgarh"
+                  target="_blank"
+                >
+                  <Flex align="center" gap={2}>
+                    <Text> Code</Text>
+                    <FaGithub />
+                  </Flex>
+                </Link>
+              </Button>
+              <Button size="xs" colorScheme="red">
+                <Link
+                  href="https://66ebf82dd0033a7161209cd9--clever-pasca-0b68d4.netlify.app/#home"
+                  target="_blank"
+                >
+                  <Flex align="center" gap={2}>
+                    <Text>Live</Text>
+                    <FaTelegramPlane />
+                  </Flex>
+                </Link>
+              </Button>
+            </Flex>
+          </Stack>
+        </Box>
 
 <Box w="50%" m="auto" className="card">
           <Box w="100%" h="280px" className="imageBox">
@@ -103,25 +233,30 @@ const Project = () => {
           </Stack>
         </Box>
 
-        <Box w="50%" m="auto" className="card">
-          <Box w="100%" h="300px" className="imageBox">
+
+
+<Box w="50%" m="auto" className="card">
+          <Box w="100%" h="280px" className="imageBox">
             <Image
-              src={cg}
+              src={hospital}
               w="100%"
               h="100%"
               objectFit="cover"
               borderRadius="10px"
             />
           </Box>
-        <Stack w="100%" style={cardStyle}>
-            <Heading fontSize="150%"> Incredible Chattisgarh</Heading>
-            <Text> Incredible Chattisgarh</Text>
-            <Text>Simple Project.</Text>
-            <Text>Tech Skill used : HTML5 | CSS3| Bootstrap | JavaScript  </Text>
+          <Stack w="100%" style={cardStyle}>
+            <Heading fontSize="150%">Hospital Management </Heading>
+            <Text>
+           Hospital management system is a software application designed to manage
+            the administrative, financial, and clinical aspects of a hospital or healthcare facility.
+            </Text>
+            {/* <Text>Simple Project.</Text> */}
+            <Text>Tech Skill used : HTML | CSS | Nextjs | TailwinedCSS </Text>
             <Flex gap={3} align="center">
               <Button size="xs" colorScheme="green">
                 <Link
-                  href="https://github.com/RupeshSahu969/Incredible_Chattisgarh"
+                  href="https://github.com/RupeshSahu969/hospital_managements"
                   target="_blank"
                 >
                   <Flex align="center" gap={2}>
@@ -132,7 +267,7 @@ const Project = () => {
               </Button>
               <Button size="xs" colorScheme="red">
                 <Link
-                  href="https://66ebf82dd0033a7161209cd9--clever-pasca-0b68d4.netlify.app/#home"
+                  href="https://hospitalnewdatamananegments.netlify.app/"
                   target="_blank"
                 >
                   <Flex align="center" gap={2}>
@@ -145,93 +280,7 @@ const Project = () => {
           </Stack>
         </Box>
 
-        <Box w="50%" m="auto" className="card">
-          <Box w="100%" h="300px" className="imageBox">
-            <Image
-              src={dashboard}
-              w="100%"
-              h="100%"
-              objectFit="cover"
-              borderRadius="10px"
-            />
-          </Box>
-        <Stack w="100%" style={cardStyle}>
-            <Heading fontSize="150%"> Tyre Management(ERP)</Heading>
-            <Text> 
-            The system allowed various types of users (Master Admin, Side Admin, and User Admin) to have access to different sets of features, based on their roles and permissions.</Text>
-            
-            <Text>Tech Skill used : HTML5 | CSS3| Bootstrap | JavaScript | React  </Text>
-            <Flex gap={3} align="center">
-              <Button size="xs" colorScheme="green">
-                <Link
-                  href="/"
-                  target="_blank"
-                >
-                  <Flex align="center" gap={2}>
-                    <Text> Code</Text>
-                    <FaGithub />
-                  </Flex>
-                </Link>
-              </Button>
-              <Button size="xs" colorScheme="red">
-                <Link
-                  href="https://suryakirangroup.in/login"
-                  target="_blank"
-                >
-                  <Flex align="center" gap={2}>
-                    <Text>Live</Text>
-                    <FaTelegramPlane />
-                  </Flex>
-                </Link>
-              </Button>
-            </Flex>
-          </Stack>
-        </Box>
-
-
-        <Box w="50%" m="auto" className="card">
-          <Box w="100%" h="300px" className="imageBox">
-            <Image
-              src={popart1}
-              w="100%"
-              h="100%"
-              objectFit="cover"
-              borderRadius="10px"
-            />
-          </Box>
-        <Stack w="100%" style={cardStyle}>
-            <Heading fontSize="150%"> POPAT</Heading>
-            <Text> project is an e-commerce platform designed to showcase and sell a variety of POPAT products</Text>
-            <Text>Simple Project.</Text>
-            <Text>Tech Skill used : HTML5 | CSS3| Bootstrap | JavaScript |React </Text>
-            <Flex gap={3} align="center">
-              <Button size="xs" colorScheme="green">
-                <Link
-                  href="https://github.com/RupeshSahu969/popat_namkenn"
-                  target="_blank"
-                >
-                  <Flex align="center" gap={2}>
-                    <Text> Code</Text>
-                    <FaGithub />
-                  </Flex>
-                </Link>
-              </Button>
-              <Button size="xs" colorScheme="red">
-                <Link
-                  href="https://66ed1ac4e16541fa802fa313--effulgent-semolina-aa07e5.netlify.app/"
-                  target="_blank"
-                >
-                  <Flex align="center" gap={2}>
-                    <Text>Live</Text>
-                    <FaTelegramPlane />
-                  </Flex>
-                </Link>
-              </Button>
-            </Flex>
-          </Stack>
-        </Box>
-
-        <Box w="50%" m="auto" className="card">
+ <Box w="50%" m="auto" className="card">
           <Box w="100%" h="280px" className="imageBox">
             <Image
               src={tata}
@@ -325,7 +374,8 @@ const Project = () => {
           </Stack>
         </Box>
 
-        <Box w="50%" m="auto" className="card">
+
+         <Box w="50%" m="auto" className="card">
           <Box w="100%" h="280px" className="imageBox">
             <Image
               src={timet}
@@ -416,6 +466,51 @@ const Project = () => {
             </Flex>
           </Stack>
         </Box>
+
+        <Box w="50%" m="auto" className="card">
+          <Box w="100%" h="300px" className="imageBox">
+            <Image
+              src={popart1}
+              w="100%"
+              h="100%"
+              objectFit="cover"
+              borderRadius="10px"
+            />
+          </Box>
+        <Stack w="100%" style={cardStyle}>
+            <Heading fontSize="150%"> POPAT</Heading>
+            <Text> project is an e-commerce platform designed to showcase and sell a variety of POPAT products</Text>
+            <Text>Simple Project.</Text>
+            <Text>Tech Skill used : HTML5 | CSS3| Bootstrap | JavaScript |React </Text>
+            <Flex gap={3} align="center">
+              <Button size="xs" colorScheme="green">
+                <Link
+                  href="https://github.com/RupeshSahu969/popat_namkenn"
+                  target="_blank"
+                >
+                  <Flex align="center" gap={2}>
+                    <Text> Code</Text>
+                    <FaGithub />
+                  </Flex>
+                </Link>
+              </Button>
+              <Button size="xs" colorScheme="red">
+                <Link
+                  href="https://66ed1ac4e16541fa802fa313--effulgent-semolina-aa07e5.netlify.app/"
+                  target="_blank"
+                >
+                  <Flex align="center" gap={2}>
+                    <Text>Live</Text>
+                    <FaTelegramPlane />
+                  </Flex>
+                </Link>
+              </Button>
+            </Flex>
+          </Stack>
+        </Box>
+
+
+       
 
 
         <Box w="50%" m="auto" className="card">
