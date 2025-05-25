@@ -1,134 +1,110 @@
-import React, { useEffect, useState } from "react";
-import { IoIosRose } from "react-icons/io";
+import React from "react";
 import {
-  SimpleGrid,
+  Box,
+  Flex,
+  IconButton,
   Drawer,
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
-  Flex,
-  Button,
-  Stack,
+  VStack,
   useDisclosure,
-  Show,
-  Hide,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import { MdMenu } from "react-icons/md";
+import { IoIosRose } from "react-icons/io";
 import { Link } from "react-scroll";
-import "../componants/style/nav.css";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const btnRef = React.useRef();
-  const [styletop, setstyletop] = useState("0");
-  const navstyle = {
-    // position: "fixed",
-    top: styletop,
-    // display: "block",
-    // transition: "top 0.3s",
-    width: "100%",
-  };
-  const prevPos = window.pageYOffset;
-  window.onscroll = () => {
-    const currPos = window.pageYOffset;
+  const isMobile = useBreakpointValue({ base: true, lg: false });
 
-    if (prevPos >= currPos) {
-      setstyletop("0");
-    } else {
-      setstyletop("-40px");
-    }
-  };
+  const navItems = [
+    { label: "Home", to: "home" },
+    { label: "About", to: "about" },
+    { label: "Skills", to: "skill" },
+    { label: "Projects", to: "projects" },
+    { label: "Contact", to: "contact" },
+  ];
 
   return (
-    <Stack zIndex="1" style={navstyle} bg="rgb(0,0,0,0.4)" p={2} color="black">
-      <Show below="lg">
-        <MdMenu ref={btnRef} onClick={onOpen} fontSize="25px" />
-        <Drawer
-          isOpen={isOpen}
-          placement="right"
-          onClose={onClose}
-          finalFocusRef={btnRef}
-          size="xs"
-        >
-          <DrawerContent bg="whitesmoke">
-            <SimpleGrid
-              columns={1}
-              align="center"
-              justify="space-between"
-              id="navbar"
-            >
-              <Flex
-                align="center"
-                justify="right"
-                gap={9}
-                fontWeight="bold"
-                flexDirection="column"
+    <Box
+      position="fixed"
+      top="0"
+      left="0"
+      width="100%"
+      zIndex="999"
+      bg="white"
+      boxShadow="md"
+      px={{ base: 4, md: 10 }}
+      py={3}
+    >
+      <Flex justify="space-between" align="center" maxW="1200px" mx="auto">
+        <Flex align="center" gap={2}>
+          <IoIosRose size={28} color="#2cb67d" />
+          <Box fontWeight="bold" fontSize="xl" color="teal.600">
+            Rupesh
+          </Box>
+        </Flex>
+
+        {isMobile ? (
+          <>
+            <IconButton
+              icon={<MdMenu />}
+              onClick={onOpen}
+              variant="ghost"
+              fontSize="24px"
+              aria-label="Open Menu"
+            />
+            <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
+              <DrawerOverlay />
+              <DrawerContent bg="white">
+                <DrawerCloseButton />
+                <VStack spacing={6} mt={16} align="start" px={6}>
+                  {navItems.map((item) => (
+                    <Link
+                      key={item.to}
+                      to={item.to}
+                      smooth
+                      spy
+                      offset={-80}
+                      duration={500}
+                      onClick={onClose}
+                      style={{
+                        fontWeight: "600",
+                        fontSize: "18px",
+                        cursor: "pointer",
+                      }}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </VStack>
+              </DrawerContent>
+            </Drawer>
+          </>
+        ) : (
+          <Flex gap={10} fontWeight="semibold">
+            {navItems.map((item) => (
+              <Link
+                key={item.to}
+                to={item.to}
+                smooth
+                spy
+                offset={-80}
+                duration={500}
+                style={{
+                  cursor: "pointer",
+                  color: "#2d2d2d",
+                }}
               >
-                <Link activeClass="active1" smooth spy to="home">
-                  Home
-                </Link>
-                <Link activeClass="active1" smooth spy to="about">
-                  About
-                </Link>
-                <Link activeClass="active1" smooth spy to="skill">
-                  Skills
-                </Link>
-                <Link activeClass="active1" smooth spy to="projects">
-                  Project
-                </Link>
-                <Link activeClass="active1" smooth spy to="contact">
-                  Contact
-                </Link>
-              </Flex>
-            </SimpleGrid>
-          </DrawerContent>
-        </Drawer>
-      </Show>
-      <Show above="lg">
-        <SimpleGrid
-          columns={2}
-          align="center"
-          justify="space-between"
-          id="navbar"
-        >
-          <IoIosRose fontSize="34px" color="#2cb67d" />
-          <Flex
-            columns={5}
-            align="center"
-            justify="right"
-            gap={9}
-            fontWeight="bold"
-          >
-            <Link activeClass="active" smooth spy to="home">
-              Home
-            </Link>
-            <Link activeClass="active" smooth spy to="about">
-              About
-            </Link>
-            <Link activeClass="active" smooth spy to="skill">
-              Skills
-            </Link>
-            <Link activeClass="active" smooth spy to="projects">
-              Project
-            </Link>
-            <Link activeClass="active" smooth spy to="contact">
-              Contact
-            </Link>
-            {/* <a
-              activeClass="active"
-              smooth
-              spy
-              to="resume"
-              href="Rupesh-Sahu.pdf"
-              download="Rupesh-Sahu.pdf"
-              target="_blank"
-            >
-              Resume
-            </a> */}
+                {item.label}
+              </Link>
+            ))}
           </Flex>
-        </SimpleGrid>
-      </Show>
-    </Stack>
+        )}
+      </Flex>
+    </Box>
   );
 };
 

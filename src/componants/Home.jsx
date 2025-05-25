@@ -1,138 +1,163 @@
 import React from "react";
-import "./style/home.css";
-import axios from "axios";
-import { MdEmail } from "react-icons/md";
-import { BsTelephoneFill } from "react-icons/bs";
-
 import {
-  Image,
-  Stack,
-  SimpleGrid,
   Box,
-  Heading,
   Flex,
+  Heading,
   Text,
-  Tooltip,
+  Stack,
   Button,
   Link,
-  Container,
+  IconButton,
+  useBreakpointValue,
 } from "@chakra-ui/react";
+import { motion } from "framer-motion";
+import { BsGithub, BsLinkedin, BsTelephoneFill } from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
+import mypic1 from "../componants/Assets/mypic1.png";
 
-import { BsGithub, BsLinkedin, BsMailbox, BsPhone } from "react-icons/bs";
-import { arrow } from "./style/theme";
-const profile = require("../componants/Assets/mypic1.png");
+const MotionFlex = motion(Flex);
+const MotionBox = motion(Box);
 
 const Home = () => {
-  const imagestyle = {
-    width: "90%",
-    height: "65%",
-  };
+  const flexDirection = useBreakpointValue({ base: "column-reverse", md: "row" });
+  const textAlign = useBreakpointValue({ base: "center", md: "left" });
 
   return (
-    <>
-      {" "}
-      <Stack
-        id="home"
-        mt={["-10px"]}
-        w="100%"
-        h={{ base: "600px", md: "100vh" }}
-        bg="teal"
-        pb={3}
+    <Box
+      id="home"
+      bgGradient="linear(to-r, gray.900, gray.800)"
+      color="white"
+      px={{ base: 4, md: 8, lg: 16 }}
+      minH="100vh"
+      display="flex"
+      alignItems="center"
+    >
+      <Flex
+        direction={flexDirection}
+        align="center"
+        justify="space-between"
+        maxW="1200px"
+        mx="auto"
+        gap={12}
+        w="full"
+        flexWrap="wrap"
+        py={{ base: 12, md: 0 }}
       >
-        <Flex
-          m="auto"
-          direction={["column", "column", "row"]}
-          h="100%"
-          align="center"
-          w="100%"
-        >
-          <Stack
-            textAlign="left"
-            m="auto"
-            spacing={3}
-            w={["100%", "100%", "65%", "70%"]}
-            h="100%"
-            justify="center"
-            pl={"10%"}
+        {/* Left: Text Content */}
+        <Stack spacing={6} flex="1" textAlign={textAlign}>
+          <MotionFlex
+            justify={textAlign}
+            gap={2}
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
           >
-            <Box w={["30%", "25%", "30%", "20%"]} marginTop="30px">
-              <Flex gap={2} bg="teal" p={1} align="center">
-                <Heading fontWeight="300" color="white">
-                  Hello
-                </Heading>
-                <Heading className="hand">👋</Heading>
-              </Flex>
+            <Heading size="md" fontWeight="normal" color="teal.300">
+              Hello, I'm
+            </Heading>
+            <Text fontSize="2xl" className="hand">👋</Text>
+          </MotionFlex>
 
-              <Box style={arrow} bg="white"></Box>
-            </Box>
-            <Heading fontSize="60px" color="black">
-              I'm Rupesh Sahu
-            </Heading>
-            <Heading fontSize="40px" color="black">
-              FrontEnd Web Developer
-            </Heading>
-            <Flex align="center" gap={2}>
-              <a
-                // href="Rupesh-Sahu.pdf"
-                // download="Rupesh-Sahu.pdf"
-              >
-                <Button bg="pink" color="white">
-                  DownloadCV
-                </Button>
-              </a>
-              <Link
-                className="iconlink"
-                borderRadius="50%"
-                border="1px solid black"
-                fontSize="30px"
-                href="https://github.com/RupeshSahu969"
-                target="_blank"
-              >
-                <BsGithub />
-              </Link>
-              <Link
-                className="iconlink"
-                borderRadius="50%"
-                border="1px solid black"
-                fontSize="30px"
-                href="https://www.linkedin.com/in/rupesh-sahu-4924a6119/"
-                target="_blank"
-              >
-                <BsLinkedin />
-              </Link>
-              <Link
-                className="iconlink"
-                borderRadius="50%"
-                border="1px solid black"
-                fontSize="30px"
-                href="tel:8103490175"
-                target="_blank"
-              >
-                {/* <BsPhone className="icon" /> */}
-                <BsTelephoneFill />
-              </Link>
-              <Link
-                className="iconlink"
-                borderRadius="50%"
-                border="1px solid black"
-                fontSize="30px"
-                href="mailto:rupeshsahu969@email.com?subject=subject&cc=supeshshau969@gmail.com"
-                target="_blank"
-              >
-                {/* <BsMailbox className="icon" /> */}
-                <MdEmail />
-              </Link>
-            </Flex>
-          </Stack>
-          <Box
-            w={["100%", "100%", "45%", "30%"]}
-            h="100%"
+          <Heading size="2xl" lineHeight="1.2">
+            Rupesh Sahu
+          </Heading>
+          <Text fontSize={{ base: "md", md: "lg" }} color="gray.300">
+            Frontend Web Developer crafting scalable UIs using React, Redux, and modern toolchains.
+          </Text>
+
+          <Flex
+            gap={4}
+            justify={textAlign}
+            flexWrap="wrap"
             align="center"
-            pt={3}
-          ></Box>
-        </Flex>
-      </Stack>
-    </>
+            mt={4}
+          >
+            {/* <Button
+              bg="teal.400"
+              color="white"
+              _hover={{ bg: "teal.500" }}
+              size="lg"
+              as="a"
+              href="#"
+              download
+            >
+              Download CV
+            </Button> */}
+            <IconButton
+              as={Link}
+              href="https://github.com/RupeshSahu969"
+              isExternal
+              icon={<BsGithub />}
+              aria-label="GitHub"
+              borderRadius="full"
+              size="lg"
+              variant="outline"
+              colorScheme="whiteAlpha"
+            />
+            <IconButton
+              as={Link}
+              href="https://www.linkedin.com/in/rupesh-sahu-4924a6119/"
+              isExternal
+              icon={<BsLinkedin />}
+              aria-label="LinkedIn"
+              borderRadius="full"
+              size="lg"
+              variant="outline"
+              colorScheme="whiteAlpha"
+            />
+            <IconButton
+              as={Link}
+              href="tel:8103490175"
+              icon={<BsTelephoneFill />}
+              aria-label="Phone"
+              borderRadius="full"
+              size="lg"
+              variant="outline"
+              colorScheme="whiteAlpha"
+            />
+            <IconButton
+              as={Link}
+              href="mailto:rupeshsahu969@email.com"
+              icon={<MdEmail />}
+              aria-label="Email"
+              borderRadius="full"
+              size="lg"
+              variant="outline"
+              colorScheme="whiteAlpha"
+            />
+          </Flex>
+        </Stack>
+
+        {/* Right: Circular Profile Image */}
+        <MotionBox
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          flex="1"
+          display="flex"
+          justifyContent="center"
+        >
+          <Box
+            borderRadius="full"
+            overflow="hidden"
+            boxSize={{ base: "180px", sm: "220px", md: "260px", lg: "300px" }}
+            border="4px solid teal"
+            boxShadow="md"
+          >
+            <img
+              src={mypic1}
+              alt="Rupesh Sahu"
+              style={{
+                width: "100%",
+                height: "100%",
+                // objectFit: "cover",
+                borderRadius: "10%",
+              }}
+            />
+          </Box>
+        </MotionBox>
+      </Flex>
+    </Box>
   );
 };
 

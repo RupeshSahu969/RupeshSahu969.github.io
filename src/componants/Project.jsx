@@ -8,599 +8,246 @@ import {
   Flex,
   Link,
   Button,
+  useBreakpointValue,
 } from "@chakra-ui/react";
-import React from "react";
-// import "./style/project.css";
-import { arrow } from "./style/theme";
-import food from "./Assets/foodimages.png"
-import { FaTelegramPlane, FaGithub } from "react-icons/fa";
-const nord = require("../componants/Assets/geek.png");
-const bestbuy = require("../componants/Assets/news.png");
-const fabbag = require("../componants/Assets/fabbag.png");
-const quiz = require("../componants/Assets/quiz.png");
-const tata = require("../componants/Assets/tata.png");
-const timet = require("../componants/Assets/timet.png");
-const horse= require("../componants/Assets/horse.png");
-const cg= require("../componants/Assets/cg.png");
-const hospital= require("../componants/Assets/hospital.png");
-const dashboard= require("../componants/Assets/tyre_management.png");
-const popart1= require("../componants/Assets/popart1.png")
-const smegrid= require("../componants/Assets/smegridpro1.png")
-const cardStyle = {
-  // borderRadius: "10px",
-  // border: "1px Solid black",
-  textAlign: "left",
-  padding: "5%",
-  // boxShadow: " #c3073f 0px 2px 4px 0px inset",
-  // backgroundColor: "rgb(166,198,197,0.2)",
-  // color: "#1A1A1D",
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+
+const projectImages = {
+  smegrid: require("./Assets/smegridpro1.png"),
+  dashboard: require("./Assets/tyre_management.png"),
+  cg: require("./Assets/cg.png"),
+  food: require("./Assets/foodimages.png"),
+  hospital: require("./Assets/hospital.png"),
+  tata: require("./Assets/tata.png"),
+  nord: require("./Assets/geek.png"),
+  timet: require("./Assets/timet.png"),
+  fabbag: require("./Assets/fabbag.png"),
+  popart1: require("./Assets/popart1.png"),
+  horse: require("./Assets/horse.png"),
+  quiz: require("./Assets/quiz.png"),
 };
-const imgcardstyle = {
-  marginTop: "-130px",
-};
+
 const Project = () => {
+  const columns = useBreakpointValue({ base: 1, md: 2, lg: 3 });
+  const imageHeight = useBreakpointValue({ base: "200px", md: "250px", lg: "300px" });
+
+  const projects = [
+    {
+      title: "Smegrid",
+      image: projectImages.smegrid,
+      description: " We are on a mission to empower manufacturers and industrial businesses with smarter procurement, efficient waste management, and skilled workforce solutions",
+      tech: "React | Tailwind CSS | Redux | Node.js | MongoDB",
+      code: "https://github.com/RupeshSahu969/smegrid",
+      live: "https://jazzy-paprenjak-6ea51f.netlify.app/",
+    },
+    {
+      title: "Tyre Management (ERP)",
+      image: projectImages.dashboard,
+      description: " The system allowed various types of users (Master Admin, Side Admin, and User Admin) to have access to different sets of features, based on their roles and permissions.",
+      tech: "React | JavaScript | Bootstrap | MongoDB| NodeJs| Express",
+      code: "#",
+      live: "https://suryakirangroup.in/login",
+    },
+    {
+      title: "Incredible Chattisgarh",
+      image: projectImages.cg,
+      description: "Showcasing tourism and cultural heritage of Chattisgarh state.",
+      tech: "HTML5 | CSS3 | JavaScript | React",
+      code: "https://github.com/RupeshSahu969/Incredible_Chattisgarh",
+      live: "https://66ebf82dd0033a7161209cd9--clever-pasca-0b68d4.netlify.app/#home",
+    },
+     {
+      title: "Food Delivery Application",
+      image: projectImages.food,
+      description: "food ordering experience for users. It includes dynamic product displays, an optimized ordering system, and a well-structured backend to manage data efficiently.",
+      tech: " React | Redux | Axios | MongoDB| NodeJs| Express",
+      code: "#",
+      live: "#",
+    },
+    {
+      title: "Hospital Management",
+      image: projectImages.hospital,
+      description: "Hospital management system is a software application designed to manage the administrative, financial, and clinical aspects of a hospital or healthcare facility.",
+      tech: "HTML | CSS | Nextjs | TailwinedCSS",
+      code: "https://github.com/RupeshSahu969/hospital_managements",
+      live: "https://hospitalnewdatamananegments.netlify.app/",
+    },
+    {
+      title: "TATA 1mg Clone",
+      image: projectImages.tata,
+      description: "online platform, which can be accessed for all your health needs.India’s leading digital consumer healthcare platform",
+      tech: "React | Redux | Axios | MongoDB| NodeJs| Express",
+      code: "https://github.com/sonuprasad66/omniscient-sheet-6598",
+      live: "https://tata-1mg-clone-sage.vercel.app/",
+    },
+    {
+      title: "GeekBuying Clone",
+      image: projectImages.nord,
+      description: "  GeekBuying is an Ecommerce website exclusive to electronic bikes,scooters, vacuum cleaners, and laptops",
+      tech: "HTML | CSS | JavaScript",
+      code: "https://github.com/manojkumar968/Geekbuying-clone",
+      live: "https://superlative-cucurucho-0929c4.netlify.app/",
+    },
+    {
+      title: "Time Tracking App",
+      image: projectImages.timet,
+      description: "Time tracker Clockify is a time tracker and timesheet app that lets you track work hours across projects.",
+      tech: "HTML | CSS | JavaScript | React |Redux | Axios | JSON API",
+      code: "https://github.com/RupeshSahu969/equable-pleasure-9638",
+      live: "https://timetracker-4jrwp56fe-rupeshsahu969.vercel.app/",
+    },
+    {
+      title: "FabBag Clone",
+      image: projectImages.fabbag,
+      description: "Fab-Bag Website is buying monthly subscrition of makupp",
+      tech: " HTML | CSS| Bootstrap | JavaScript",
+      code: "https://github.com/mdnasirdmt/fab-bag-clone-again",
+      live: "https://fantastic-squirrel-8ca900.netlify.app/",
+    },
+    {
+      title: "POPAT Namkeen",
+      image: projectImages.popart1,
+      description: "project is an e-commerce platform designed to showcase and sell a variety of POPAT products",
+      tech: " HTML5 | CSS3| Bootstrap | JavaScript |React ",
+      code: "https://github.com/RupeshSahu969/popat_namkenn",
+      live: "https://66ed1ac4e16541fa802fa313--effulgent-semolina-aa07e5.netlify.app/",
+    },
+    {
+      title: "Horse Ride Booking",
+      image: projectImages.horse,
+      description: "Booking system for recreational horse riding activities.",
+      tech: "HTML5 | CSS3| Bootstrap | JavaScript | React | Redux ",
+      code: "https://github.com/RupeshSahu969/horse-ride-booking",
+      live: "https://66948e54c9f4c804c3474c2b--frolicking-melba-84e996.netlify.app/",
+    },
+    {
+      title: "Quiz Application",
+      image: projectImages.quiz,
+      description: " Basic Quiz app to test your computer knowledge Also the question and its optins changed in every pages reload",
+      tech: "HTML5 | CSS3| Bootstrap | JavaScript",
+      code: "https://github.com/RupeshSahu969/QuizzApp-javasccript",
+      live: "https://lively-kleicha-dca27e.netlify.app/",
+    },
+  ];
+
   return (
-    <Box id="projects">
-      <Box m="auto" w={["50%", "40%", "30%", "15%"]}>
-        <Heading bg="teal" fontWeight="300" color="white">
-          Projects
+    <Box id="projects" py={16} px={{ base: 4, md: 8, lg: 16 }} bg="gray.50">
+      <Box textAlign="center" mb={16}>
+        <Heading
+          as="h2"
+          size="2xl"
+          mb={4}
+          color="teal.600"
+          fontWeight="semibold"
+          letterSpacing="tight"
+        >
+          My Projects
         </Heading>
-        <Box style={arrow} bg="teal"></Box>
+        <Box
+          h="4px"
+          w="120px"
+          bg="teal.500"
+          mx="auto"
+          borderRadius="full"
+          boxShadow="md"
+        />
       </Box>
-      <SimpleGrid
-        columns={[1, 1, 1, 1, 2]}
-        align="center"
-        justify="center"
-        spacingY={20}
-        pt={"5%"}
-        pb={"5%"}
-        // pl={"100px"}
-        // pr={"100px"}
-      >
 
-<Box w="50%" m="auto" className="card">
-          <Box w="100%" h="280px" className="imageBox">
-            <Image
-              src={smegrid}
-              w="100%"
-              h="100%"
-              objectFit="cover"
-              borderRadius="10px"
-            />
-          </Box>
-          <Stack w="100%" style={cardStyle}>
-            <Heading fontSize="150%">Smegrid </Heading>
-            <Text>
-            We are on a mission to empower manufacturers and industrial businesses with smarter procurement, efficient waste management, and skilled workforce solutions
-            </Text>
-            {/* <Text>Simple Project.</Text> */}
-            <Text>Tech Skill used : HTML | CSS | React | Redux | Axios |MongoDB|
-            NodeJs| Express </Text>
-            <Flex gap={3} align="center">
-              <Button size="xs" colorScheme="green">
-                <Link
-                  href="https://jazzy-paprenjak-6ea51f.netlify.app/"
-                  target="_blank"
-                >
-                  <Flex align="center" gap={2}>
-                    <Text> Code</Text>
-                    <FaGithub />
-                  </Flex>
-                </Link>
-              </Button>
-              <Button size="xs" colorScheme="red">
-                <Link
-                  href="https://jazzy-paprenjak-6ea51f.netlify.app/"
-                  target="_blank"
-                >
-                  <Flex align="center" gap={2}>
-                    <Text>Live</Text>
-                    <FaTelegramPlane />
-                  </Flex>
-                </Link>
-              </Button>
-            </Flex>
-          </Stack>
-        </Box>
+      <SimpleGrid columns={columns} spacing={8} maxW="1400px" mx="auto">
+        {projects.map((project, index) => (
+          <Box
+            key={index}
+            borderWidth="1px"
+            borderRadius="xl"
+            overflow="hidden"
+            boxShadow="lg"
+            bg="white"
+            _hover={{
+              transform: "translateY(-5px)",
+              boxShadow: "xl",
+            }}
+            transition="all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"
+          >
+            <Box
+              h={imageHeight}
+              overflow="hidden"
+              position="relative"
+              borderBottom="2px solid"
+              borderColor="teal.100"
+            >
+              <Image
+                src={project.image}
+                alt={project.title}
+                w="100%"
+                h="100%"
+                objectFit="cover"
+                _hover={{ transform: "scale(1.05)" }}
+                transition="transform 0.3s ease"
+              />
+            </Box>
 
- <Box w="50%" m="auto" className="card">
-          <Box w="100%" h="300px" className="imageBox">
-            <Image
-              src={dashboard}
-              w="100%"
-              h="100%"
-              objectFit="cover"
-              borderRadius="10px"
-            />
-          </Box>
-        <Stack w="100%" style={cardStyle}>
-            <Heading fontSize="150%"> Tyre Management(ERP)</Heading>
-            <Text> 
-            The system allowed various types of users (Master Admin, Side Admin, and User Admin) to have access to different sets of features, based on their roles and permissions.</Text>
-            
-            <Text>Tech Skill used : HTML5 | CSS3| Bootstrap | JavaScript | React  </Text>
-            <Flex gap={3} align="center">
-              <Button size="xs" colorScheme="green">
-                <Link
-                  href="/"
-                  target="_blank"
-                >
-                  <Flex align="center" gap={2}>
-                    <Text> Code</Text>
-                    <FaGithub />
-                  </Flex>
-                </Link>
-              </Button>
-              <Button size="xs" colorScheme="red">
-                <Link
-                  href="https://suryakirangroup.in/login"
-                  target="_blank"
-                >
-                  <Flex align="center" gap={2}>
-                    <Text>Live</Text>
-                    <FaTelegramPlane />
-                  </Flex>
-                </Link>
-              </Button>
-            </Flex>
-          </Stack>
-        </Box>
-
- <Box w="50%" m="auto" className="card">
-          <Box w="100%" h="300px" className="imageBox">
-            <Image
-              src={cg}
-              w="100%"
-              h="100%"
-              objectFit="cover"
-              borderRadius="10px"
-            />
-          </Box>
-        <Stack w="100%" style={cardStyle}>
-            <Heading fontSize="150%"> Incredible Chattisgarh</Heading>
-            <Text> Incredible Chattisgarh</Text>
-            <Text>Simple Project.</Text>
-            <Text>Tech Skill used : HTML5 | CSS3| Bootstrap | JavaScript  </Text>
-            <Flex gap={3} align="center">
-              <Button size="xs" colorScheme="green">
-                <Link
-                  href="https://github.com/RupeshSahu969/Incredible_Chattisgarh"
-                  target="_blank"
-                >
-                  <Flex align="center" gap={2}>
-                    <Text> Code</Text>
-                    <FaGithub />
-                  </Flex>
-                </Link>
-              </Button>
-              <Button size="xs" colorScheme="red">
-                <Link
-                  href="https://66ebf82dd0033a7161209cd9--clever-pasca-0b68d4.netlify.app/#home"
-                  target="_blank"
-                >
-                  <Flex align="center" gap={2}>
-                    <Text>Live</Text>
-                    <FaTelegramPlane />
-                  </Flex>
-                </Link>
-              </Button>
-            </Flex>
-          </Stack>
-        </Box>
-
-<Box w="50%" m="auto" className="card">
-          <Box w="100%" h="280px" className="imageBox">
-            <Image
-              src={food}
-              w="100%"
-              h="100%"
-              objectFit="cover"
-              borderRadius="10px"
-            />
-          </Box>
-          <Stack w="100%" style={cardStyle}>
-            <Heading fontSize="150%">Food Delivery Application</Heading>
-            <Text>
-            food ordering experience for users. It includes dynamic product displays, an optimized ordering system, and a well-structured backend to manage data efficiently.
-            </Text>
-            {/* <Text>Simple Project.</Text> */}
-            <Text>Tech Skill used : HTML | CSS | React | Redux | Axios |MongoDB|
-            NodeJs| Express </Text>
-            <Flex gap={3} align="center">
-              {/* <Button size="xs" colorScheme="green">
-                <Link
-                  href="https://github.com/RupeshSahu969/QuizzApp-javasccript"
-                  target="_blank"
-                >
-                  <Flex align="center" gap={2}>
-                    <Text> Code</Text>
-                    <FaGithub />
-                  </Flex>
-                </Link>
-              </Button>
-              <Button size="xs" colorScheme="red">
-                <Link
-                  href="https://lively-kleicha-dca27e.netlify.app/"
-                  target="_blank"
-                >
-                  <Flex align="center" gap={2}>
-                    <Text>Live</Text>
-                    <FaTelegramPlane />
-                  </Flex>
-                </Link>
-              </Button> */}
-            </Flex>
-          </Stack>
-        </Box>
-
-
-
-<Box w="50%" m="auto" className="card">
-          <Box w="100%" h="280px" className="imageBox">
-            <Image
-              src={hospital}
-              w="100%"
-              h="100%"
-              objectFit="cover"
-              borderRadius="10px"
-            />
-          </Box>
-          <Stack w="100%" style={cardStyle}>
-            <Heading fontSize="150%">Hospital Management </Heading>
-            <Text>
-           Hospital management system is a software application designed to manage
-            the administrative, financial, and clinical aspects of a hospital or healthcare facility.
-            </Text>
-            {/* <Text>Simple Project.</Text> */}
-            <Text>Tech Skill used : HTML | CSS | Nextjs | TailwinedCSS </Text>
-            <Flex gap={3} align="center">
-              <Button size="xs" colorScheme="green">
-                <Link
-                  href="https://github.com/RupeshSahu969/hospital_managements"
-                  target="_blank"
-                >
-                  <Flex align="center" gap={2}>
-                    <Text> Code</Text>
-                    <FaGithub />
-                  </Flex>
-                </Link>
-              </Button>
-              <Button size="xs" colorScheme="red">
-                <Link
-                  href="https://hospitalnewdatamananegments.netlify.app/"
-                  target="_blank"
-                >
-                  <Flex align="center" gap={2}>
-                    <Text>Live</Text>
-                    <FaTelegramPlane />
-                  </Flex>
-                </Link>
-              </Button>
-            </Flex>
-          </Stack>
-        </Box>
-
- <Box w="50%" m="auto" className="card">
-          <Box w="100%" h="280px" className="imageBox">
-            <Image
-              src={tata}
-              w="100%"
-              h="100%"
-              objectFit="cover"
-              borderRadius="10px"
-            />
-          </Box>
-          <Stack w="100%" style={cardStyle}>
-            <Heading fontSize="150%">TATA 1mg</Heading>
-            <Text>
-              online platform, which can be accessed for all your health
-              needs.India’s leading digital consumer healthcare platform
-            </Text>
-            <Text>An Group Project ,Executed in 4 days.</Text>
-            <Text>
-              Tech Skill used : HTML | CSS | React | Redux | Axios |MongoDB|
-              NodeJs| Express |
-            </Text>
-            <Flex gap={3} align="center">
-              <Button size="xs" colorScheme="green">
-                <Link
-                  href="https://github.com/sonuprasad66/omniscient-sheet-6598"
-                  target="_blank"
-                >
-                  <Flex align="center" gap={2}>
-                    <Text> Code</Text>
-                    <FaGithub />
-                  </Flex>
-                </Link>
-              </Button>
-              <Button size="xs" colorScheme="red">
-                <Link
-                  href="https://tata-1mg-clone-sage.vercel.app/"
-                  target="_blank"
-                >
-                  <Flex align="center" gap={2}>
-                    <Text>Live</Text>
-                    <FaTelegramPlane />
-                  </Flex>
-                </Link>
-              </Button>
-            </Flex>
-          </Stack>
-        </Box>
-
-        
-        <Box w="50%" m="auto" className="card">
-          <Box w="100%" h="280px" className="imageBox">
-            <Image
-              src={nord}
-              w="100%"
-              h="100%"
-              objectFit="cover"
-              borderRadius="10px"
-            />
-          </Box>
-          <Stack w="100%" style={cardStyle}>
-            <Heading fontSize="150%">GeekkBuying - Clone</Heading>
-            <Text>
-              GeekBuying is an Ecommerce website exclusive to electronic bikes,
-              scooters, vacuum cleaners, and laptops
-            </Text>
-            <Text>An Group Project ,Executed in 5 days.</Text>
-            <Text>Tech Skill used : HTML | CSS| Bootstrap | JavaScript</Text>
-            <Flex gap={3} align="center">
-              <Button size="xs" colorScheme="green">
-                <Link
-                  href="https://github.com/manojkumar968/Geekbuying-clone"
-                  target="_blank"
-                >
-                  <Flex align="center" gap={2}>
-                    <Text> Code</Text>
-                    <FaGithub />
-                  </Flex>
-                </Link>
-              </Button>
-              <Button size="xs" colorScheme="red">
-                <Link
-                  href="https://superlative-cucurucho-0929c4.netlify.app/"
-                  target="_blank"
-                >
-                  <Flex align="center" gap={2}>
-                    <Text>Live</Text>
-                    <FaTelegramPlane />
-                  </Flex>
-                </Link>
-              </Button>
-            </Flex>
-          </Stack>
-        </Box>
-
-
-         <Box w="50%" m="auto" className="card">
-          <Box w="100%" h="280px" className="imageBox">
-            <Image
-              src={timet}
-              w="100%"
-              h="100%"
-              pb="0"
-              objectFit="cover"
-              borderRadius="10px"
-            />
-          </Box>
-          <Stack w="100%" style={cardStyle}>
-            <Heading fontSize="150%">Time Tracking</Heading>
-            <Text>
-              Time tracker Clockify is a time tracker and timesheet app that
-              lets you track work hours across projects.
-            </Text>
-            <Text>An Group Project ,Executed in 4 days.</Text>
-            <Text>
-              Tech Skill used : HTML | CSS | JavaScript | React |Redux | Axios |
-              JSON API
-            </Text>
-            <Flex gap={3} align="center">
-              <Button size="xs" colorScheme="green">
-                <Link
-                  href="https://github.com/RupeshSahu969/equable-pleasure-9638"
-                  target="_blank"
-                >
-                  <Flex align="center" gap={2}>
-                    <Text> Code</Text>
-                    <FaGithub />
-                  </Flex>
-                </Link>
-              </Button>
-              <Button size="xs" colorScheme="red">
-                <Link
-                  href="https://timetracker-4jrwp56fe-rupeshsahu969.vercel.app/"
-                  target="_blank"
-                >
-                  <Flex align="center" gap={2}>
-                    <Text>Live</Text>
-                    <FaTelegramPlane />
-                  </Flex>
-                </Link>
-              </Button>
-            </Flex>
-          </Stack>
-        </Box>
-
-
-        <Box w="50%" m="auto" className="card">
-          <Box w="100%" h="300px" className="imageBox">
-            <Image
-              src={fabbag}
-              w="100%"
-              h="100%"
-              objectFit="cover"
-              borderRadius="10px"
-            />
-          </Box>
-          <Stack w="100%" style={cardStyle}>
-            <Heading fontSize="150%">Fab-Bag- Clone</Heading>
-            <Text>Fab-Bag Website is buying monthly subscrition of makupp</Text>
-            <Text>An Group Project ,Executed in 5 days.</Text>
-            <Text>Tech Skill used : HTML | CSS| Bootstrap | JavaScript</Text>
-            <Flex gap={3} align="center">
-              <Button size="xs" colorScheme="green">
-                <Link
-                  href="https://github.com/mdnasirdmt/fab-bag-clone-again"
-                  target="_blank"
-                >
-                  <Flex align="center" gap={2}>
-                    <Text> Code</Text>
-                    <FaGithub />
-                  </Flex>
-                </Link>
-              </Button>
-              <Button size="xs" colorScheme="red">
-                <Link
-                  href="https://fantastic-squirrel-8ca900.netlify.app/"
-                  target="_blank"
-                >
-                  <Flex align="center" gap={2}>
-                    <Text>Live</Text>
-                    <FaTelegramPlane />
-                  </Flex>
-                </Link>
-              </Button>
-            </Flex>
-          </Stack>
-        </Box>
-
-        <Box w="50%" m="auto" className="card">
-          <Box w="100%" h="300px" className="imageBox">
-            <Image
-              src={popart1}
-              w="100%"
-              h="100%"
-              objectFit="cover"
-              borderRadius="10px"
-            />
-          </Box>
-        <Stack w="100%" style={cardStyle}>
-            <Heading fontSize="150%"> POPAT</Heading>
-            <Text> project is an e-commerce platform designed to showcase and sell a variety of POPAT products</Text>
-            <Text>Simple Project.</Text>
-            <Text>Tech Skill used : HTML5 | CSS3| Bootstrap | JavaScript |React </Text>
-            <Flex gap={3} align="center">
-              <Button size="xs" colorScheme="green">
-                <Link
-                  href="https://github.com/RupeshSahu969/popat_namkenn"
-                  target="_blank"
-                >
-                  <Flex align="center" gap={2}>
-                    <Text> Code</Text>
-                    <FaGithub />
-                  </Flex>
-                </Link>
-              </Button>
-              <Button size="xs" colorScheme="red">
-                <Link
-                  href="https://66ed1ac4e16541fa802fa313--effulgent-semolina-aa07e5.netlify.app/"
-                  target="_blank"
-                >
-                  <Flex align="center" gap={2}>
-                    <Text>Live</Text>
-                    <FaTelegramPlane />
-                  </Flex>
-                </Link>
-              </Button>
-            </Flex>
-          </Stack>
-        </Box>
-
-
-       
-
-
-        <Box w="50%" m="auto" className="card">
-          <Box w="100%" h="330px" className="imageBox">
-            <Image
-              src={horse}
-              w={{base:"100%",md:"100%"}}
-              h={{base:"100%",md:"100%"}}
+            <Stack p={6} spacing={4}>
+              <Heading
+                as="h3"
+                fontSize="xl"
+                fontWeight="semibold"
+                color="gray.800"
+                minH="60px"
+              >
+                {project.title}
+              </Heading>
               
-              objectFit="cover"
-              borderRadius="10px"
-            />
+              <Text
+                fontSize="md"
+                color="gray.600"
+                lineHeight="tall"
+                minH="80px"
+              >
+                {project.description}
+              </Text>
+
+              <Text
+                fontSize="sm"
+                color="teal.600"
+                fontWeight="medium"
+                bg="teal.50"
+                p={2}
+                borderRadius="md"
+              >
+                {project.tech}
+              </Text>
+
+              <Flex gap={4} mt={2}>
+                <Button
+                  as="a"
+                  href={project.code}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  size="sm"
+                  colorScheme="teal"
+                  variant="outline"
+                  leftIcon={<FaGithub />}
+                  flex="1"
+                  _hover={{ bg: "teal.50" }}
+                >
+                  View Code
+                </Button>
+                <Button
+                  as="a"
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  size="sm"
+                  colorScheme="teal"
+                  leftIcon={<FaExternalLinkAlt />}
+                  flex="1"
+                >
+                  Live Demo
+                </Button>
+              </Flex>
+            </Stack>
           </Box>
-          <Stack w="100%" style={cardStyle}>
-            <Heading fontSize="150%">horse ride booking</Heading>
-            <Text>Horse ride booking system</Text>
-            <Text>Simple Project.</Text>
-            <Text>Tech Skill used : HTML5 | CSS3| Bootstrap | JavaScript | React | Redux </Text>
-            <Flex gap={3} align="center">
-              <Button size="xs" colorScheme="green">
-                <Link
-                  href="https://github.com/RupeshSahu969/horse-ride-booking"
-                  target="_blank"
-                >
-                  <Flex align="center" gap={2}>
-                    <Text> Code</Text>
-                    <FaGithub />
-                  </Flex>
-                </Link>
-              </Button>
-              <Button size="xs" colorScheme="red">
-                <Link
-                  href="https://66948e54c9f4c804c3474c2b--frolicking-melba-84e996.netlify.app/"
-                  target="_blank"
-                >
-                  <Flex align="center" gap={2}>
-                    <Text>Live</Text>
-                    <FaTelegramPlane />
-                  </Flex>
-                </Link>
-              </Button>
-            </Flex>
-          </Stack>
-        </Box>
-        
-        
-        <Box w="50%" m="auto" className="card">
-          <Box w="100%" h="280px" className="imageBox">
-            <Image
-              src={quiz}
-              w="100%"
-              h="100%"
-              objectFit="cover"
-              borderRadius="10px"
-            />
-          </Box>
-          <Stack w="100%" style={cardStyle}>
-            <Heading fontSize="150%">Quiz App</Heading>
-            <Text>
-              Basic Quiz app to test your computer knowledge Also the question
-              and its optins changed in every pages reload
-            </Text>
-            <Text>Simple Project.</Text>
-            <Text>Tech Skill used : HTML5 | CSS3| Bootstrap | JavaScript</Text>
-            <Flex gap={3} align="center">
-              <Button size="xs" colorScheme="green">
-                <Link
-                  href="https://github.com/RupeshSahu969/QuizzApp-javasccript"
-                  target="_blank"
-                >
-                  <Flex align="center" gap={2}>
-                    <Text> Code</Text>
-                    <FaGithub />
-                  </Flex>
-                </Link>
-              </Button>
-              <Button size="xs" colorScheme="red">
-                <Link
-                  href="https://lively-kleicha-dca27e.netlify.app/"
-                  target="_blank"
-                >
-                  <Flex align="center" gap={2}>
-                    <Text>Live</Text>
-                    <FaTelegramPlane />
-                  </Flex>
-                </Link>
-              </Button>
-            </Flex>
-          </Stack>
-        </Box>
+        ))}
       </SimpleGrid>
     </Box>
   );
