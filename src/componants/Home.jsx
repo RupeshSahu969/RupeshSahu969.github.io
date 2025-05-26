@@ -62,7 +62,7 @@ const Home = () => {
             Rupesh Sahu
           </Heading>
           <Text fontSize={{ base: "md", md: "lg" }} color="gray.300">
-            Frontend Web Developer crafting scalable UIs using React, Redux, and modern toolchains.
+            Frontend and Backend Web Developer crafting scalable UIs using React, Redux, and modern toolchains.
           </Text>
 
           <Flex

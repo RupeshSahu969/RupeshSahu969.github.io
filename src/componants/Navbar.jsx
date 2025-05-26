@@ -12,8 +12,8 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { MdMenu } from "react-icons/md";
-import { IoIosRose } from "react-icons/io";
 import { Link } from "react-scroll";
+import logo from "../componants/Assets/logo.png";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -39,13 +39,28 @@ const Navbar = () => {
       px={{ base: 4, md: 10 }}
       py={3}
     >
-      <Flex justify="space-between" align="center" maxW="1200px" mx="auto">
-        <Flex align="center" gap={2}>
-          <IoIosRose size={28} color="#2cb67d" />
-          <Box fontWeight="bold" fontSize="xl" color="teal.600">
-            Rupesh
-          </Box>
-        </Flex>
+      <Flex
+        justify="space-between"
+        align="center"
+        maxW="1200px"
+        mx="auto"
+        // Add responsive direction for mobile if you want logo center and menu below or something else
+        flexDirection={{ base: "row", md: "row" }}
+      >
+        {/* Centered Logo */}
+        <Box
+          flex="1"
+          display="flex"
+          justifyContent={{ base: "flex-start", md: "flex-start" }}
+          cursor="pointer"
+          _hover={{ transform: "scale(1.1)", transition: "transform 0.3s ease" }}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          <img src={logo} alt="Logo" style={{ height: "40px" }} />
+        </Box>
+
+        {/* Spacer for desktop so menu stays right */}
+        {!isMobile && <Box flex="1" />}
 
         {isMobile ? (
           <>
@@ -84,7 +99,7 @@ const Navbar = () => {
             </Drawer>
           </>
         ) : (
-          <Flex gap={10} fontWeight="semibold">
+          <Flex flex="1" justify="flex-end" gap={10} fontWeight="semibold">
             {navItems.map((item) => (
               <Link
                 key={item.to}

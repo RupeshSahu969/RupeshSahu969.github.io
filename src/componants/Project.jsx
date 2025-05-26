@@ -25,6 +25,8 @@ const projectImages = {
   popart1: require("./Assets/popart1.png"),
   horse: require("./Assets/horse.png"),
   quiz: require("./Assets/quiz.png"),
+  ecommarce_bacend:require("./Assets/ecommarce_bacend.png"),
+  bloager:require("./Assets/blaog.png"),
 };
 
 const Project = () => {
@@ -64,6 +66,15 @@ const Project = () => {
       code: "#",
       live: "#",
     },
+     {
+  title: "E-commerce Application",
+  image: projectImages.ecommarce_bacend,
+  description: "An e-commerce platform for shopping items like clothes and more. It features dynamic product displays, an optimized ordering system, and a well-structured backend for efficient data management.",
+  tech: "MongoDB | Node.js | Express | EJS | Tailwind CSS",
+  code: "https://nodejs-project-2-qhkq.onrender.com/shop",
+  live: "https://nodejs-project-2-qhkq.onrender.com/shop",
+}
+,
     {
       title: "Hospital Management",
       image: projectImages.hospital,
@@ -72,6 +83,15 @@ const Project = () => {
       code: "https://github.com/RupeshSahu969/hospital_managements",
       live: "https://hospitalnewdatamananegments.netlify.app/",
     },
+    {
+  title: "Blogger",
+  image: projectImages.bloager,
+  description: "A full-featured blog management system allowing users to create, edit, delete, and comment on posts. Includes user authentication and dynamic content rendering using EJS.",
+  tech: "MongoDB | Node.js | Express | EJS | Bootstrap CSS",
+  code: "https://myblogger-application.onrender.com/",
+  live: "https://myblogger-application.onrender.com/",
+}
+,
     {
       title: "TATA 1mg Clone",
       image: projectImages.tata,
