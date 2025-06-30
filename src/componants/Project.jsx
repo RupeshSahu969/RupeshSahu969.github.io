@@ -10,8 +10,9 @@ import {
   Button,
   useBreakpointValue,
 } from "@chakra-ui/react";
+import { useState } from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
-
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 const projectImages = {
   smegrid: require("./Assets/smegridpro1.png"),
   dashboard: require("./Assets/tyre_management.png"),
@@ -27,6 +28,8 @@ const projectImages = {
   quiz: require("./Assets/quiz.png"),
   ecommarce_bacend:require("./Assets/ecommarce_bacend.png"),
   bloager:require("./Assets/blaog.png"),
+  myblog:require("./Assets/myblogaapplication.png"),
+  aidetection:require("./Assets/aidetection.png")
 };
 
 const Project = () => {
@@ -66,6 +69,14 @@ const Project = () => {
       code: "#",
       live: "#",
     },
+      {
+      title: "Blog Application",
+      image: projectImages.myblog,
+      description: "This is a Blog Application for creating, editing, and sharing blog posts with a clean and responsive design",
+      tech: "React | JavaScript | Bootstrap | MongoDB| NodeJs| Express",
+      code: "https://github.com/RupeshSahu969/Blog_Add",
+      live: "https://ornate-chimera-2df085.netlify.app/",
+    },
      {
   title: "E-commerce Application",
   image: projectImages.ecommarce_bacend,
@@ -83,15 +94,7 @@ const Project = () => {
       code: "https://github.com/RupeshSahu969/hospital_managements",
       live: "https://hospitalnewdatamananegments.netlify.app/",
     },
-    {
-  title: "Blogger",
-  image: projectImages.bloager,
-  description: "A full-featured blog management system allowing users to create, edit, delete, and comment on posts. Includes user authentication and dynamic content rendering using EJS.",
-  tech: "MongoDB | Node.js | Express | EJS | Bootstrap CSS",
-  code: "https://myblogger-application.onrender.com/",
-  live: "https://myblogger-application.onrender.com/",
-}
-,
+  
     {
       title: "TATA 1mg Clone",
       image: projectImages.tata,
@@ -124,6 +127,15 @@ const Project = () => {
       code: "https://github.com/mdnasirdmt/fab-bag-clone-again",
       live: "https://fantastic-squirrel-8ca900.netlify.app/",
     },
+      {
+  title: "Application Social Media Blogger",
+  image: projectImages.bloager,
+  description: "A full-featured blog management system allowing users to create, edit, delete, and comment on posts. Includes user authentication and dynamic content rendering using EJS.",
+  tech: "MongoDB | Node.js | Express | EJS | Bootstrap CSS",
+  code: "https://myblogger-application.onrender.com/",
+  live: "https://myblogger-application.onrender.com/",
+}
+,
     {
       title: "POPAT Namkeen",
       image: projectImages.popart1,
@@ -148,7 +160,32 @@ const Project = () => {
       code: "https://github.com/RupeshSahu969/QuizzApp-javasccript",
       live: "https://lively-kleicha-dca27e.netlify.app/",
     },
+    {
+  title: "Thief Detection Alarm",
+  image: projectImages.aidetection,
+  description: "An AI-powered thief detection system that triggers an alarm when suspicious activity is detected using a webcam. Built with Next.js and integrated with real-time video processing for proactive security monitoring.",
+  tech: "Next.js",
+  code: "https://github.com/RupeshSahu969/Thief-Detection-Alarm",
+  live: "https://aidetectionapplication.netlify.app/"
+}
+,
   ];
+
+
+  const itemsPerPage = 6;
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = Math.ceil(projects.length / itemsPerPage);
+
+  // Get current page projects
+  const currentProjects = projects.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    window.scrollTo({ top: 0, behavior: "smooth" }); // scroll to top on page change
+  };
 
   return (
     <Box id="projects" py={16} px={{ base: 4, md: 8, lg: 16 }} bg="gray.50">
@@ -174,7 +211,7 @@ const Project = () => {
       </Box>
 
       <SimpleGrid columns={columns} spacing={8} maxW="1400px" mx="auto">
-        {projects.map((project, index) => (
+        {currentProjects.map((project, index) => (
           <Box
             key={index}
             borderWidth="1px"
@@ -206,69 +243,105 @@ const Project = () => {
               />
             </Box>
 
-            <Stack p={6} spacing={4}>
+            <Stack p={4} spacing={3}>
               <Heading
                 as="h3"
-                fontSize="xl"
+                fontSize="lg"
                 fontWeight="semibold"
                 color="gray.800"
-                minH="60px"
+                minH="50px"
               >
                 {project.title}
               </Heading>
-              
-              <Text
-                fontSize="md"
-                color="gray.600"
-                lineHeight="tall"
-                minH="80px"
-              >
+
+              <Text fontSize="sm" color="gray.600" lineHeight="short" minH="60px">
                 {project.description}
               </Text>
 
               <Text
-                fontSize="sm"
+                fontSize="xs"
                 color="teal.600"
                 fontWeight="medium"
                 bg="teal.50"
-                p={2}
+                p={1}
                 borderRadius="md"
               >
                 {project.tech}
               </Text>
 
-              <Flex gap={4} mt={2}>
+              <Flex gap={2} mt={2}>
                 <Button
                   as="a"
                   href={project.code}
                   target="_blank"
                   rel="noopener noreferrer"
-                  size="sm"
+                  size="xs"
                   colorScheme="teal"
                   variant="outline"
                   leftIcon={<FaGithub />}
                   flex="1"
                   _hover={{ bg: "teal.50" }}
                 >
-                  View Code
+                  Code
                 </Button>
                 <Button
                   as="a"
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  size="sm"
+                  size="xs"
                   colorScheme="teal"
                   leftIcon={<FaExternalLinkAlt />}
                   flex="1"
                 >
-                  Live Demo
+                  Live
                 </Button>
               </Flex>
             </Stack>
           </Box>
         ))}
       </SimpleGrid>
+
+      {/* Pagination Controls */}
+     <Flex mt={10} justify="center" gap={2} alignItems="center" flexWrap="wrap">
+  <Button
+    size="sm"
+    onClick={() => currentPage > 1 && handlePageChange(currentPage - 1)}
+    colorScheme="teal"
+    variant="outline"
+    leftIcon={<FaChevronLeft />}
+    isDisabled={currentPage === 1}
+    minW="80px"
+  >
+    Prev
+  </Button>
+
+  {[1, 2].map((page) => (
+    <Button
+      key={page}
+      size="sm"
+      onClick={() => handlePageChange(page)}
+      colorScheme={page === currentPage ? "teal" : "gray"}
+      variant={page === currentPage ? "solid" : "outline"}
+      _hover={{ bg: "teal.100" }}
+      minW="40px"
+    >
+      {page}
+    </Button>
+  ))}
+
+  <Button
+    size="sm"
+    onClick={() => currentPage < totalPages && handlePageChange(currentPage + 1)}
+    colorScheme="teal"
+    variant="outline"
+    rightIcon={<FaChevronRight />}
+    isDisabled={currentPage === totalPages}
+    minW="80px"
+  >
+    Next
+  </Button>
+</Flex>
     </Box>
   );
 };
