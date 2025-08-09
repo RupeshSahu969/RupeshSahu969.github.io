@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.02ee1c73.css",
-    "main.js": "/static/js/main.34cf0d1b.js",
+    "main.js": "/static/js/main.9f9a65a5.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/cg.png": "/static/media/cg.b67c7d5964bba3794292.png",
     "static/media/horse.png": "/static/media/horse.62d8319a455a189d7a12.png",
@@ -17,6 +17,7 @@
     "static/media/quiz.png": "/static/media/quiz.9f785e9d83b91768018a.png",
     "static/media/multitheme.png": "/static/media/multitheme.deb07337e36e517c1167.png",
     "static/media/tyre_management.png": "/static/media/tyre_management.626a6d8e51bdd6070444.png",
+    "static/media/aichat_pic.png": "/static/media/aichat_pic.be676b31da257dfeeba4.png",
     "static/media/hospital.png": "/static/media/hospital.afc7ef11ef64bcbd12f3.png",
     "static/media/timet.png": "/static/media/timet.d4af0bba1b09b1c7f7ea.png",
     "static/media/vscode.png": "/static/media/vscode.19edc3fbac1c451f289d.png",
@@ -32,11 +33,11 @@
     "static/media/js.png": "/static/media/js.3dfb665e058d08c99f28.png",
     "index.html": "/index.html",
     "main.02ee1c73.css.map": "/static/css/main.02ee1c73.css.map",
-    "main.34cf0d1b.js.map": "/static/js/main.34cf0d1b.js.map",
+    "main.9f9a65a5.js.map": "/static/js/main.9f9a65a5.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.02ee1c73.css",
-    "static/js/main.34cf0d1b.js"
+    "static/js/main.9f9a65a5.js"
   ]
 }
