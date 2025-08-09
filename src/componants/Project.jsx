@@ -30,6 +30,7 @@ const projectImages = {
   aidetection: require("./Assets/aidetection.png"),
 jobpotal: require("./Assets/jobpotal.png"),
 multitheme: require("./Assets/multitheme.png"),
+Aipic: require("./Assets/aichat_pic.png"),
 };
 
 const Project = () => {
@@ -37,6 +38,14 @@ const Project = () => {
   const imageHeight = useBreakpointValue({ base: "200px", md: "250px", lg: "300px" });
 
   const projects = [
+    {
+      title: "AI-Powered Assistant",
+      image: projectImages.Aipic,
+      description: "AI chat app with real-time, intelligent responses. Built with React.js, Node.js, and Google Gemini API for seamless, low-latency interactions.",
+      tech: "React | Tailwind CSS | Redux | Node.js | MongoDB| Gemini Api",
+      code: "https://github.com/RupeshSahu969/AI-Chat-Assistant",
+      live: "https://github.com/RupeshSahu969/AI-Chat-Assistant",
+    },
     {
       title: "Smegrid",
       image: projectImages.smegrid,
