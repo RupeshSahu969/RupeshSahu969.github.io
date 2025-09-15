@@ -31,6 +31,7 @@ const projectImages = {
 jobpotal: require("./Assets/jobpotal.png"),
 multitheme: require("./Assets/multitheme.png"),
 Aipic: require("./Assets/aichat_pic.png"),
+Movie: require("./Assets/movie.png"),
 };
 
 const Project = () => {
@@ -38,14 +39,7 @@ const Project = () => {
   const imageHeight = useBreakpointValue({ base: "200px", md: "250px", lg: "300px" });
 
   const projects = [
-    {
-      title: "AI-Powered Assistant",
-      image: projectImages.Aipic,
-      description: "AI chat app with real-time, intelligent responses. Built with React.js, Node.js, and Google Gemini API for seamless, low-latency interactions.",
-      tech: "React | Tailwind CSS | Redux | Node.js | MongoDB| Gemini Api",
-      code: "https://github.com/RupeshSahu969/AI-Chat-Assistant",
-      live: "https://github.com/RupeshSahu969/AI-Chat-Assistant",
-    },
+    
     {
       title: "Smegrid",
       image: projectImages.smegrid,
@@ -79,13 +73,14 @@ const Project = () => {
       live: "#",
     },
     {
-      title: "Blog Application",
-      image: projectImages.myblog,
-      description: "This is a Blog Application for creating, editing, and sharing blog posts with a clean and responsive design",
-      tech: "React | JavaScript | Bootstrap | MongoDB| NodeJs| Express",
-      code: "https://github.com/RupeshSahu969/Blog_Add",
-      live: "https://ornate-chimera-2df085.netlify.app/",
+      title: "Movie Review Platform",
+      image: projectImages.Movie,
+      description: "Develop a movie review platform where users can browse movies, read and write reviews, and rate films.",
+      tech: "React | Tailwind CSS | Redux | Node.js | MongoDB|Expressjs",
+      code: "https://github.com/RupeshSahu969/Movie-Review-Platform",
+      live: "https://mellow-florentine-4536c9.netlify.app/",
     },
+    
     {
       title: "E-commerce Application",
       image: projectImages.ecommarce_bacend,
@@ -99,9 +94,27 @@ const Project = () => {
       image: projectImages.hospital,
       description: "Hospital management system is a software application designed to manage the administrative, financial, and clinical aspects of a hospital or healthcare facility.",
       tech: "HTML | CSS | Nextjs | TailwinedCSS",
-      code: "https://github.com/RupeshSahu969/hospital_managements",
+      code: "https://hospitalnewdatamananegments.netlify.app/",
       live: "https://hospitalnewdatamananegments.netlify.app/",
     },
+    {
+      title: "Blog Application",
+      image: projectImages.myblog,
+      description: "This is a Blog Application for creating, editing, and sharing blog posts with a clean and responsive design",
+      tech: "React | JavaScript | Bootstrap | MongoDB| NodeJs| Express",
+      code: "https://github.com/RupeshSahu969/Blog_Add",
+      live: "https://ornate-chimera-2df085.netlify.app/",
+    },
+    
+    {
+      title: "AI-Powered Assistant",
+      image: projectImages.Aipic,
+      description: "AI chat app with real-time, intelligent responses. Built with React.js, Node.js, and Google Gemini API for seamless, low-latency interactions.",
+      tech: "React | Tailwind CSS | Redux | Node.js | MongoDB| Gemini Api",
+      code: "https://github.com/RupeshSahu969/AI-Chat-Assistant",
+      live: "https://github.com/RupeshSahu969/AI-Chat-Assistant",
+    },
+    
     {
       title: "TATA 1mg Clone",
       image: projectImages.tata,
@@ -109,14 +122,6 @@ const Project = () => {
       tech: "React | Redux | Axios | MongoDB| NodeJs| Express",
       code: "https://github.com/sonuprasad66/omniscient-sheet-6598",
       live: "https://tata-1mg-clone-sage.vercel.app/",
-    },
-    {
-      title: "GeekBuying Clone",
-      image: projectImages.nord,
-      description: "GeekBuying is an Ecommerce website exclusive to electronic bikes, scooters, vacuum cleaners, and laptops",
-      tech: "HTML | CSS | JavaScript",
-      code: "https://github.com/manojkumar968/Geekbuying-clone",
-      live: "https://superlative-cucurucho-0929c4.netlify.app/",
     },
     {
       title: "Time Tracking App",
@@ -127,13 +132,15 @@ const Project = () => {
       live: "https://timetracker-4jrwp56fe-rupeshsahu969.vercel.app/",
     },
     {
-      title: "FabBag Clone",
-      image: projectImages.fabbag,
-      description: "Fab-Bag Website is buying monthly subscription of makeup",
-      tech: "HTML | CSS| Bootstrap | JavaScript",
-      code: "https://github.com/mdnasirdmt/fab-bag-clone-again",
-      live: "https://fantastic-squirrel-8ca900.netlify.app/",
+      title: "GeekBuying Clone",
+      image: projectImages.nord,
+      description: "GeekBuying is an Ecommerce website exclusive to electronic bikes, scooters, vacuum cleaners, and laptops",
+      tech: "HTML | CSS | JavaScript",
+      code: "https://github.com/manojkumar968/Geekbuying-clone",
+      live: "https://superlative-cucurucho-0929c4.netlify.app/",
     },
+    
+   
     {
       title: "Application Social Media Blogger",
       image: projectImages.bloager,
@@ -158,7 +165,14 @@ const Project = () => {
   code: "https://github.com/RupeshSahu969/RupeshSahu-MultiThemeApp-FrontendDeveloper",
   live: "https://funny-faun-46df98.netlify.app/",
 },
-
+ {
+      title: "FabBag Clone",
+      image: projectImages.fabbag,
+      description: "Fab-Bag Website is buying monthly subscription of makeup",
+      tech: "HTML | CSS| Bootstrap | JavaScript",
+      code: "https://github.com/mdnasirdmt/fab-bag-clone-again",
+      live: "https://fantastic-squirrel-8ca900.netlify.app/",
+    },
 
     {
       title: "POPAT Namkeen",

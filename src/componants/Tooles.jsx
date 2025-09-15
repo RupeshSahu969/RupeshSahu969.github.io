@@ -4,10 +4,12 @@ import { motion } from "framer-motion";
 const MotionBox = motion(Box);
 
 const tools = [
-  { name: "Git", image: require("../componants/Assets/git.png") },
   { name: "VS Code", image: require("../componants/Assets/vscode.png") },
   { name: "Postman", image: require("../componants/Assets/postman.png") },
+  { name: "Git", image: require("../componants/Assets/git.png") },
   { name: "GitLab", image: require("../componants/Assets/gitlab.png") },
+  { name: "Docker", image: require("../componants/Assets/docker.png") },
+  { name: "Aws", image: require("../componants/Assets/aws.png") },
 ];
 
 const Tooles = () => {
