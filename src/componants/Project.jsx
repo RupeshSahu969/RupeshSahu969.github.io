@@ -10,58 +10,34 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
-import smegrid from "./Assets/smegridpro1.png";
-import dashboard from "./Assets/tyre_management.png";
-import cg from "./Assets/cg.png";
-import food from "./Assets/foodimages.png";
-import hospital from "./Assets/hospital.png";
-import tata from "./Assets/tata.png";
-import nord from "./Assets/geek.png";
-import timet from "./Assets/timet.png";
-import fabbag from "./Assets/fabbag.png";
-import popart1 from "./Assets/popart1.png";
-import horse from "./Assets/horse.png";
-import quiz from "./Assets/quiz.png";
-import ecommarce_bacend from "./Assets/ecommarce_bacend.png";
-import bloager from "./Assets/blaog.png";
-import myblog from "./Assets/myblogaapplication.png";
-import aidetection from "./Assets/aidetection.png";
-import jobpotal from "./Assets/jobpotal.png";
-import multitheme from "./Assets/multitheme.png";
-import Aipic from "./Assets/aichat_pic.png";
-import Movie from "./Assets/movie.png";
-import vdDashboard from "./Assets/vddashboard.png";
+
 const projectImages = {
-  smegrid,
-  dashboard,
-  cg,
-  food,
-  hospital,
-  tata,
-  nord,
-  timet,
-  fabbag,
-  popart1,
-  horse,
-  quiz,
-  ecommarce_bacend,
-  bloager,
-  myblog,
-  aidetection,
-  jobpotal,
-  multitheme,
-  Aipic,
-  Movie,
-  vdDashboard
+  smegrid: require("./Assets/smegridpro1.png"),
+  dashboard: require("./Assets/tyre_management.png"),
+  cg: require("./Assets/cg.png"),
+  food: require("./Assets/foodimages.png"),
+  hospital: require("./Assets/hospital.png"),
+  tata: require("./Assets/tata.png"),
+  nord: require("./Assets/geek.png"),
+  timet: require("./Assets/timet.png"),
+  fabbag: require("./Assets/fabbag.png"),
+  popart1: require("./Assets/popart1.png"),
+  horse: require("./Assets/horse.png"),
+  quiz: require("./Assets/quiz.png"),
+  ecommarce_bacend: require("./Assets/ecommarce_bacend.png"),
+  bloager: require("./Assets/blaog.png"),
+  myblog: require("./Assets/myblogaapplication.png"),
+  aidetection: require("./Assets/aidetection.png"),
+jobpotal: require("./Assets/jobpotal.png"),
+multitheme: require("./Assets/multitheme.png"),
+Aipic: require("./Assets/aichat_pic.png"),
+Movie: require("./Assets/movie.png"),
+vdDashboard:require("./Assets/evdashboard.png")
 };
 
 const Project = () => {
-    const columns = useBreakpointValue({ base: 1, md: 2, lg: 3 });
-  const imageHeight = useBreakpointValue({
-    base: "200px",
-    md: "250px",
-    lg: "300px",
-  });
+  const columns = useBreakpointValue({ base: 1, md: 2, lg: 3 });
+  const imageHeight = useBreakpointValue({ base: "200px", md: "250px", lg: "300px" });
 
   const projects = [
     
@@ -122,7 +98,6 @@ const Project = () => {
       code: "https://hospitalnewdatamananegments.netlify.app/",
       live: "https://hospitalnewdatamananegments.netlify.app/",
     },
-      
     {
       title: "Blog Application",
       image: projectImages.myblog,
