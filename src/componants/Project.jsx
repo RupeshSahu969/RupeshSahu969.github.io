@@ -32,7 +32,9 @@ jobpotal: require("./Assets/jobpotal.png"),
 multitheme: require("./Assets/multitheme.png"),
 Aipic: require("./Assets/aichat_pic.png"),
 Movie: require("./Assets/movie.png"),
-vdDashboard:require("./Assets/evdashboard.png")
+vdDashboard:require("./Assets/evdashboard.png"),
+book:require("./Assets/book.png")
+
 };
 
 const Project = () => {
@@ -57,14 +59,7 @@ const Project = () => {
       code: "#",
       live: "https://suryakirangroup.in/login",
     },
-    {
-      title: "Incredible Chattisgarh",
-      image: projectImages.cg,
-      description: "Showcasing tourism and cultural heritage of Chattisgarh state.",
-      tech: "HTML5 | CSS3 | JavaScript | React",
-      code: "https://github.com/RupeshSahu969/Incredible_Chattisgarh",
-      live: "https://66ebf82dd0033a7161209cd9--clever-pasca-0b68d4.netlify.app/#home",
-    },
+   
     {
       title: "Food Delivery Application",
       image: projectImages.food,
@@ -81,6 +76,15 @@ const Project = () => {
       code: "https://github.com/RupeshSahu969/Movie-Review-Platform",
       live: "https://mellow-florentine-4536c9.netlify.app/",
     },
+    {
+  title: "Product Data Explorer",
+  image: projectImages.book,
+  description: "A full-stack product exploration platform built with NestJS and React. Users can browse products, trigger on-demand scraping jobs, and view updated product details in real time.",
+  tech: "NestJS | React | Next.js | Axios",
+  code: "https://github.com/RupeshSahu969/Product-Data-Explorer",
+  live: "https://astonishing-sorbet-0197d1.netlify.app/",
+}
+,
     
     {
       title: "E-commerce Application",
@@ -89,6 +93,14 @@ const Project = () => {
       tech: "MongoDB | Node.js | Express | EJS | Tailwind CSS",
       code: "https://nodejs-project-2-qhkq.onrender.com/shop",
       live: "https://nodejs-project-2-qhkq.onrender.com/shop",
+    },
+     {
+      title: "Incredible Chattisgarh",
+      image: projectImages.cg,
+      description: "Showcasing tourism and cultural heritage of Chattisgarh state.",
+      tech: "HTML5 | CSS3 | JavaScript | React",
+      code: "https://66ebf82dd0033a7161209cd9--clever-pasca-0b68d4.netlify.app/#home",
+      live: "https://66ebf82dd0033a7161209cd9--clever-pasca-0b68d4.netlify.app/#home",
     },
     {
       title: "Hospital Management",
