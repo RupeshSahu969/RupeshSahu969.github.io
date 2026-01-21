@@ -1,117 +1,76 @@
-import { Box, Heading, SimpleGrid, Image, useBreakpointValue } from "@chakra-ui/react";
+import React from "react";
 import { motion } from "framer-motion";
 import GitHubCalendar from "react-github-calendar";
-import { theme } from "./style/theme";
-
-const MotionBox = motion(Box);
 
 const Calendar = () => {
-  const blockSize = useBreakpointValue({ base: 12, md: 14, lg: 16 });
-  const columns = useBreakpointValue({ base: 1, md: 2, lg: 3 });
-
   return (
-    <Box id="github" py={16} px={{ base: 4, md: 8, lg: 16 }} bg="gray.50">
-      <Box textAlign="center" mb={12} maxW="1200px" mx="auto">
-        <Heading
-          as="h2"
-          size="2xl"
-          mb={4}
-          color="teal.600"
-          fontWeight="semibold"
-          position="relative"
-          _after={{
-            content: '""',
-            width: "80px",
-            height: "4px",
-            bg: "teal.500",
-            position: "absolute",
-            bottom: "-8px",
-            left: "50%",
-            transform: "translateX(-50%)",
-            borderRadius: "full",
-          }}
-        >
-          Coding Activity
-        </Heading>
-      </Box>
+    <section id="github" className="bg-white py-20 text-slate-900">
+      <div className="mx-auto max-w-6xl px-4 md:px-8">
+        <div className="text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">
+            Activity
+          </p>
+          <h2 className="mt-3 text-3xl font-bold md:text-4xl">
+            Consistency on GitHub
+          </h2>
+        </div>
 
-      <MotionBox
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        maxW="1200px"
-        mx="auto"
-        mb={16}
-      >
-        <GitHubCalendar
-          username="rupeshsahu969"
-          blockSize={blockSize}
-          blockMargin={4}
-          fontSize={16}
-          theme={{
-            light: ['#ebedf0', theme.colors.teal[100], theme.colors.teal[300], theme.colors.teal[400], theme.colors.teal[600]],
-            dark: ['#161b22', theme.colors.teal[700], theme.colors.teal[500], theme.colors.teal[400], theme.colors.teal[300]]
-          }}
-          style={{ margin: 'auto' }}
-        />
-      </MotionBox>
-
-      <SimpleGrid
-        columns={columns}
-        spacing={6}
-        maxW="1200px"
-        mx="auto"
-      >
-        <MotionBox
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.3, delay: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm"
         >
-          <Image
-            src="https://github-readme-stats.vercel.app/api/top-langs?username=rupeshsahu969&show_icons=true&locale=en&layout=compact"
-            alt="Top Languages"
-            w="100%"
-            borderRadius="lg"
-            boxShadow="xl"
-            loading="lazy"
-          />
-        </MotionBox>
+          <div className="overflow-x-auto">
+            <GitHubCalendar
+              username="rupeshsahu969"
+              blockSize={14}
+              blockMargin={4}
+              fontSize={14}
+              theme={{
+                light: ["#e2e8f0", "#99f6e4", "#5eead4", "#2dd4bf", "#0f766e"],
+                dark: ["#0f172a", "#134e4a", "#0f766e", "#14b8a6", "#5eead4"],
+              }}
+              style={{ margin: "0 auto" }}
+            />
+          </div>
+        </motion.div>
 
-        <MotionBox
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.3, delay: 0.4 }}
-        >
-          <Image
-            src="https://github-readme-stats.vercel.app/api?username=rupeshsahu969&show_icons=true&locale=en"
-            alt="GitHub Stats"
-            w="100%"
-            borderRadius="lg"
-            boxShadow="xl"
-            loading="lazy"
-          />
-        </MotionBox>
-
-        <MotionBox
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.3, delay: 0.6 }}
-        >
-          <Image
-            src="https://github-readme-streak-stats.herokuapp.com/?user=rupeshsahu969&"
-            alt="GitHub Streak"
-            w="100%"
-            borderRadius="lg"
-            boxShadow="xl"
-            loading="lazy"
-          />
-        </MotionBox>
-      </SimpleGrid>
-    </Box>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {[
+            {
+              src: "https://github-readme-stats.vercel.app/api/top-langs?username=rupeshsahu969&show_icons=true&locale=en&layout=compact",
+              alt: "Top Languages",
+            },
+            {
+              src: "https://github-readme-stats.vercel.app/api?username=rupeshsahu969&show_icons=true&locale=en",
+              alt: "GitHub Stats",
+            },
+            {
+              src: "https://github-readme-streak-stats.herokuapp.com/?user=rupeshsahu969&",
+              alt: "GitHub Streak",
+            },
+          ].map((card, index) => (
+            <motion.div
+              key={card.alt}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+            >
+              <img
+                src={card.src}
+                alt={card.alt}
+                className="h-full w-full object-cover"
+                loading="lazy"
+              />
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 

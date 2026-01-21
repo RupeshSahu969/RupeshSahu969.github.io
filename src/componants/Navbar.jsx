@@ -1,23 +1,10 @@
-import React from "react";
-import {
-  Box,
-  Flex,
-  IconButton,
-  Drawer,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
-  VStack,
-  useDisclosure,
-  useBreakpointValue,
-} from "@chakra-ui/react";
-import { MdMenu } from "react-icons/md";
+import React, { useState } from "react";
+import { MdClose, MdMenu } from "react-icons/md";
 import { Link } from "react-scroll";
 import logo from "../componants/Assets/logo.png";
 
 const Navbar = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const isMobile = useBreakpointValue({ base: true, lg: false });
+  const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
     { label: "Home", to: "home" },
@@ -28,99 +15,90 @@ const Navbar = () => {
   ];
 
   return (
-    <Box
-      position="fixed"
-      top="0"
-      left="0"
-      width="100%"
-      zIndex="999"
-      bg="white"
-      boxShadow="md"
-      px={{ base: 4, md: 10 }}
-      py={3}
-    >
-      <Flex
-        justify="space-between"
-        align="center"
-        maxW="1200px"
-        mx="auto"
-        // Add responsive direction for mobile if you want logo center and menu below or something else
-        flexDirection={{ base: "row", md: "row" }}
-      >
-        {/* Centered Logo */}
-        <Box
-          flex="1"
-          display="flex"
-          justifyContent={{ base: "flex-start", md: "flex-start" }}
-          cursor="pointer"
-          _hover={{ transform: "scale(1.1)", transition: "transform 0.3s ease" }}
+    <header className="border-b border-slate-200 bg-white">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-8">
+        <button
+          type="button"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="flex items-center gap-3"
         >
-          <img src={logo} alt="Logo" style={{ height: "40px" }} />
-        </Box>
+          <img src={logo} alt="Logo" className="h-10 w-auto" />
+        </button>
 
-        {/* Spacer for desktop so menu stays right */}
-        {!isMobile && <Box flex="1" />}
+        <nav className="hidden items-center gap-8 text-sm font-semibold text-slate-700 lg:flex">
+          {navItems.map((item) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              smooth
+              spy
+              offset={-80}
+              duration={500}
+              activeClass="text-brand-600"
+              className="cursor-pointer transition hover:text-brand-600"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
 
-        {isMobile ? (
-          <>
-            <IconButton
-              icon={<MdMenu />}
-              onClick={onOpen}
-              variant="ghost"
-              fontSize="24px"
-              aria-label="Open Menu"
-            />
-            <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
-              <DrawerOverlay />
-              <DrawerContent bg="white">
-                <DrawerCloseButton />
-                <VStack spacing={6} mt={16} align="start" px={6}>
-                  {navItems.map((item) => (
-                    <Link
-                      key={item.to}
-                      to={item.to}
-                      smooth
-                      spy
-                      offset={-80}
-                      duration={500}
-                      onClick={onClose}
-                      style={{
-                        fontWeight: "600",
-                        fontSize: "18px",
-                        cursor: "pointer",
-                      }}
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
-                </VStack>
-              </DrawerContent>
-            </Drawer>
-          </>
-        ) : (
-          <Flex flex="1" justify="flex-end" gap={10} fontWeight="semibold">
-            {navItems.map((item) => (
-              <Link
-                key={item.to}
-                to={item.to}
-                smooth
-                spy
-                offset={-80}
-                duration={500}
-                style={{
-                  cursor: "pointer",
-                  color: "#2d2d2d",
-                }}
+        <button
+          type="button"
+          onClick={() => setIsOpen((prev) => !prev)}
+          className="rounded-full border border-slate-200 bg-white p-2 text-slate-700 shadow-sm transition hover:border-brand-200 hover:text-brand-600 lg:hidden"
+          aria-label="Toggle navigation"
+        >
+          {isOpen ? <MdClose size={22} /> : <MdMenu size={22} />}
+        </button>
+      </div>
+
+      {isOpen && (
+        <div className="fixed inset-0 z-50 lg:hidden">
+          <button
+            type="button"
+            className="absolute inset-0 bg-slate-900/20 backdrop-blur-sm"
+            onClick={() => setIsOpen(false)}
+            aria-label="Close navigation"
+          />
+          <div className="absolute left-1/2 top-6 w-[92%] -translate-x-1/2 rounded-2xl border border-slate-200 bg-white px-6 py-6 shadow-2xl sm:top-10 sm:w-[28rem]">
+            <div className="mb-8 flex items-center justify-between">
+              <span className="text-sm font-semibold text-slate-900">Navigate</span>
+              <button
+                type="button"
+                onClick={() => setIsOpen(false)}
+                className="rounded-full border border-slate-200 p-2 text-slate-700 transition hover:text-brand-600"
+                aria-label="Close menu"
               >
-                {item.label}
-              </Link>
-            ))}
-          </Flex>
-        )}
-      </Flex>
-    </Box>
+                <MdClose size={20} />
+              </button>
+            </div>
+            <div className="flex flex-col gap-6 text-base font-semibold text-slate-900">
+              {navItems.map((item) => (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  smooth
+                  spy
+                  offset={-80}
+                  duration={500}
+                  onClick={() => setIsOpen(false)}
+                  className="cursor-pointer transition hover:text-brand-600"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+    </header>
   );
 };
 
 export default Navbar;
+
+
+
+
+
+

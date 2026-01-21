@@ -1,7 +1,5 @@
-import { Box, Heading, Image, SimpleGrid, Text, Flex, useBreakpointValue, Tooltip } from "@chakra-ui/react";
+import React from "react";
 import { motion } from "framer-motion";
-
-const MotionBox = motion(Box);
 
 const tools = [
   { name: "VS Code", image: require("../componants/Assets/vscode.png") },
@@ -9,91 +7,46 @@ const tools = [
   { name: "Git", image: require("../componants/Assets/git.png") },
   { name: "GitLab", image: require("../componants/Assets/gitlab.png") },
   { name: "Docker", image: require("../componants/Assets/docker.png") },
-  { name: "Aws", image: require("../componants/Assets/aws.png") },
+  { name: "AWS", image: require("../componants/Assets/aws.png") },
 ];
 
 const Tooles = () => {
-  const columns = useBreakpointValue({ base: 2, md: 3, lg: 4 });
-  const imageSize = useBreakpointValue({ base: "50px", md: "70px", lg: "90px" });
-
   return (
-    <Box id="tools" py={16} px={{ base: 4, md: 8, lg: 16 }} bg="gray.50">
-      <Box textAlign="center" mb={12} maxW="1200px" mx="auto">
-        <Heading
-          as="h2"
-          size="2xl"
-          mb={4}
-          color="teal.600"
-          fontWeight="semibold"
-          position="relative"
-          _after={{
-            content: '""',
-            width: "60px",
-            height: "4px",
-            bg: "teal.500",
-            position: "absolute",
-            bottom: "-8px",
-            left: "50%",
-            transform: "translateX(-50%)",
-            borderRadius: "full",
-          }}
-        >
-          Development Tools
-        </Heading>
-      </Box>
+    <section id="tools" className="bg-white py-20 text-slate-900">
+      <div className="mx-auto max-w-6xl px-4 md:px-8">
+        <div className="text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">
+            Tooling
+          </p>
+          <h2 className="mt-3 text-3xl font-bold md:text-4xl">
+            Dev environment essentials
+          </h2>
+        </div>
 
-      <SimpleGrid
-        columns={columns}
-        spacing={{ base: 6, md: 8, lg: 10 }}
-        maxW="1200px"
-        mx="auto"
-      >
-        {tools.map((tool, index) => (
-          <MotionBox
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.3, delay: index * 0.1 }}
-          >
-            <Tooltip label={tool.name} hasArrow placement="top">
-              <Flex
-                direction="column"
-                align="center"
-                p={6}
-                bg="white"
-                borderRadius="xl"
-                boxShadow="md"
-                _hover={{
-                  transform: "translateY(-5px)",
-                  boxShadow: "xl",
-                }}
-                transition="all 0.2s ease"
-                height="100%"
-              >
-                <Image
-                  src={tool.image}
-                  alt={tool.name}
-                  w={imageSize}
-                  h={imageSize}
-                  objectFit="contain"
-                  mb={4}
-                  loading="lazy"
-                />
-                <Text
-                  fontSize={{ base: "md", md: "lg" }}
-                  fontWeight="600"
-                  color="gray.700"
-                  textAlign="center"
-                >
-                  {tool.name}
-                </Text>
-              </Flex>
-            </Tooltip>
-          </MotionBox>
-        ))}
-      </SimpleGrid>
-    </Box>
+        <div className="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
+          {tools.map((tool, index) => (
+            <motion.div
+              key={tool.name}
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: index * 0.08 }}
+              className="flex flex-col items-center justify-center rounded-2xl border border-slate-200 bg-slate-50 p-6 text-center shadow-sm transition hover:-translate-y-1 hover:border-brand-200 hover:shadow-soft"
+            >
+              <img
+                src={tool.image}
+                alt={tool.name}
+                className="h-14 w-14 object-contain md:h-16 md:w-16"
+                loading="lazy"
+              />
+              <p className="mt-4 text-sm font-semibold text-slate-700 md:text-base">
+                {tool.name}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 

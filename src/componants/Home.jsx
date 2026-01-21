@@ -1,164 +1,109 @@
 import React from "react";
-import {
-  Box,
-  Flex,
-  Heading,
-  Text,
-  Stack,
-  Button,
-  Link,
-  IconButton,
-  useBreakpointValue,
-} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { BsGithub, BsLinkedin, BsTelephoneFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
-import mypic1 from "../componants/Assets/mypic1.png";
-
-const MotionFlex = motion(Flex);
-const MotionBox = motion(Box);
+import { Link as ScrollLink } from "react-scroll";
+import mylogo from "../componants/Assets/mylogo.jpg";
 
 const Home = () => {
-  const flexDirection = useBreakpointValue({ base: "column-reverse", md: "row" });
-  const textAlign = useBreakpointValue({ base: "center", md: "left" });
-
   return (
-    <Box
+    <section
       id="home"
-      bgGradient="linear(to-r, gray.900, gray.800)"
-      color="white"
-      px={{ base: 4, md: 8, lg: 16 }}
-      minH="100vh"
-      display="flex"
-      alignItems="center"
+      className="min-h-screen bg-white text-slate-900"
     >
-      <Flex
-        direction={flexDirection}
-        align="center"
-        justify="space-between"
-        maxW="1200px"
-        mx="auto"
-        gap={12}
-        w="full"
-        flexWrap="wrap"
-        py={{ base: 12, md: 0 }}
-      >
-        {/* Left: Text Content */}
-        <Stack spacing={6} flex="1" textAlign={textAlign}>
-          <MotionFlex
-            justify={textAlign}
-            gap={2}
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-          >
-            <Heading size="md" fontWeight="normal" color="teal.300">
-              Hello, I'm
-            </Heading>
-            <Text fontSize="2xl" className="hand">👋</Text>
-          </MotionFlex>
+      <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-24 md:px-8 lg:grid-cols-[1.1fr_0.9fr]">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="space-y-6 text-center lg:text-left"
+        >
+          <div className="inline-flex items-center gap-3 rounded-full border border-slate-200 bg-slate-100 px-4 py-2 text-sm uppercase tracking-widest text-slate-600">
+            <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
+            Available for new projects
+          </div>
 
-          <Heading size="2xl" lineHeight="1.2">
+          <div className="flex items-center justify-center gap-3 text-slate-600 lg:justify-start">
+            <p className="text-lg font-medium">Hello, I am</p>
+            <span className="inline-flex h-8 w-8 items-center justify-center text-2xl animate-wave">
+              👋
+            </span>
+          </div>
+
+          <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
             Rupesh Sahu
-          </Heading>
-          <Text fontSize={{ base: "md", md: "lg" }} color="gray.300">
-            Frontend and Backend Web Developer crafting scalable UIs using React, Redux, and modern toolchains.
-          </Text>
+          </h1>
+          <p className="text-lg text-slate-600">
+            Full-stack developer crafting scalable, performant web apps with a
+            focus on delightful user experience.
+          </p>
 
-          <Flex
-            gap={4}
-            justify={textAlign}
-            flexWrap="wrap"
-            align="center"
-            mt={4}
-          >
-            {/* <Button
-              bg="teal.400"
-              color="white"
-              _hover={{ bg: "teal.500" }}
-              size="lg"
-              as="a"
-              href="#"
-              download
+          <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-start">
+            <ScrollLink
+              to="projects"
+              smooth
+              offset={-80}
+              duration={500}
+              className="cursor-pointer rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-slate-900 shadow-soft transition hover:bg-brand-400"
             >
-              Download CV
-            </Button> */}
-            <IconButton
-              as={Link}
-              href="https://github.com/RupeshSahu969"
-              isExternal
-              icon={<BsGithub />}
-              aria-label="GitHub"
-              borderRadius="full"
-              size="lg"
-              variant="outline"
-              colorScheme="whiteAlpha"
-            />
-            <IconButton
-              as={Link}
-              href="https://www.linkedin.com/in/rupesh-sahu-4924a6119/"
-              isExternal
-              icon={<BsLinkedin />}
-              aria-label="LinkedIn"
-              borderRadius="full"
-              size="lg"
-              variant="outline"
-              colorScheme="whiteAlpha"
-            />
-            <IconButton
-              as={Link}
-              href="tel:8103490175"
-              icon={<BsTelephoneFill />}
-              aria-label="Phone"
-              borderRadius="full"
-              size="lg"
-              variant="outline"
-              colorScheme="whiteAlpha"
-            />
-            <IconButton
-              as={Link}
-              href="mailto:rupeshsahu969@email.com"
-              icon={<MdEmail />}
-              aria-label="Email"
-              borderRadius="full"
-              size="lg"
-              variant="outline"
-              colorScheme="whiteAlpha"
-            />
-          </Flex>
-        </Stack>
+              View Projects
+            </ScrollLink>
+            <ScrollLink
+              to="contact"
+              smooth
+              offset={-80}
+              duration={500}
+              className="cursor-pointer rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-brand-300 hover:text-brand-600"
+            >
+              Let&apos;s Talk
+            </ScrollLink>
+          </div>
 
-        {/* Right: Circular Profile Image */}
-        <MotionBox
-          initial={{ opacity: 0, scale: 0.9 }}
+          <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-start">
+            {[
+              { href: "https://github.com/RupeshSahu969", icon: <BsGithub /> },
+              {
+                href: "https://www.linkedin.com/in/rupesh-sahu-4924a6119/",
+                icon: <BsLinkedin />,
+              },
+              { href: "tel:8103490175", icon: <BsTelephoneFill /> },
+              { href: "mailto:rupeshsahu969@email.com", icon: <MdEmail /> },
+            ].map((item, index) => (
+              <a
+                key={index}
+                href={item.href} 
+                target={item.href.startsWith("http") ? "_blank" : undefined}
+                rel={item.href.startsWith("http") ? "noreferrer" : undefined}
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 text-lg text-slate-600 transition hover:border-brand-400 hover:text-brand-600"
+              >
+                {item.icon}
+              </a>
+            ))}
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
-          flex="1"
-          display="flex"
-          justifyContent="center"
+          className="flex justify-center"
         >
-          <Box
-            borderRadius="full"
-            overflow="hidden"
-            boxSize={{ base: "180px", sm: "220px", md: "260px", lg: "300px" }}
-            border="4px solid teal"
-            boxShadow="md"
-          >
-            <img
-              src={mypic1}
-              alt="Rupesh Sahu"
-              style={{
-                width: "100%",
-                height: "100%",
-                // objectFit: "cover",
-                borderRadius: "10%",
-              }}
-            />
-          </Box>
-        </MotionBox>
-      </Flex>
-    </Box>
+          <div className="relative">
+            <div className="absolute -left-8 -top-8 h-40 w-40 animate-float rounded-full bg-brand-500/20 blur-2xl" />
+            <div className="absolute -bottom-10 -right-10 h-32 w-32 animate-float rounded-full bg-emerald-500/20 blur-2xl" />
+            <div className="relative h-72 w-72 overflow-hidden rounded-[32px] border border-slate-200 bg-slate-100 p-3 shadow-soft md:h-80 md:w-80">
+              <img
+                src={mylogo}
+                alt="Rupesh Sahu"
+                className="h-full w-full rounded-[24px] object-cover"
+              />
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
   );
 };
 
 export default Home;
+

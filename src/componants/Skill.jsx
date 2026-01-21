@@ -1,7 +1,6 @@
-import { Box, Heading, Image, Stack, Text, SimpleGrid, Tooltip, useBreakpointValue } from "@chakra-ui/react";
+import React from "react";
 import { motion } from "framer-motion";
 
-// Import images
 const skills = [
   { icon: require("../componants/Assets/html.png"), name: "HTML" },
   { icon: require("../componants/Assets/css.png"), name: "CSS" },
@@ -18,94 +17,46 @@ const skills = [
   { icon: require("../componants/Assets/postman.png"), name: "Postman" },
   { icon: require("../componants/Assets/vscode.png"), name: "VS Code" },
   { icon: require("../componants/Assets/gitlab.png"), name: "GitLab" },
-  { icon: require("../componants/Assets/tailwined.png"), name: "Tailwind css" },
+  { icon: require("../componants/Assets/tailwined.png"), name: "Tailwind CSS" },
 ];
 
-const MotionBox = motion(Box);
-
 const Skill = () => {
-  const columns = useBreakpointValue({ base: 3, sm: 4, md: 5, lg: 6 });
-  const imageSize = useBreakpointValue({ base: "50px", md: "60px", lg: "70px" });
-
   return (
-    <Box id="skill" py={16} px={{ base: 4, md: 8, lg: 16 }} bg="gray.50">
-      <Box textAlign="center" mb={12} maxW="1200px" mx="auto">
-        <Heading
-          as="h2"
-          size="2xl"
-          mb={4}
-          color="teal.600"
-          fontWeight="semibold"
-          position="relative"
-          _after={{
-            content: '""',
-            width: "80px",
-            height: "4px",
-            bg: "teal.500",
-            position: "absolute",
-            bottom: "-8px",
-            left: "50%",
-            transform: "translateX(-50%)",
-            borderRadius: "full",
-          }}
-        >
-          Tech Stack
-        </Heading>
-      </Box>
+    <section id="skill" className="bg-white py-20 text-slate-900">
+      <div className="mx-auto max-w-6xl px-4 md:px-8">
+        <div className="text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">
+            Tech stack
+          </p>
+          <h2 className="mt-3 text-3xl font-bold md:text-4xl">
+            Tools I build with every day
+          </h2>
+        </div>
 
-      <SimpleGrid
-        columns={columns}
-        spacing={{ base: 6, md: 8, lg: 10 }}
-        maxW="1200px"
-        mx="auto"
-      >
-        {skills.map((skill, index) => (
-          <MotionBox
-            key={index}
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.3, delay: index * 0.05 }}
-          >
-            <Tooltip label={skill.name} hasArrow placement="top">
-              <Stack
-                spacing={3}
-                align="center"
-                justify="center"
-                p={4}
-                borderRadius="xl"
-                bg="white"
-                boxShadow="md"
-                _hover={{
-                  transform: "translateY(-5px)",
-                  boxShadow: "xl",
-                  bg: "white",
-                }}
-                transition="all 0.2s ease"
-                height="100%"
-              >
-                <Image
-                  src={skill.icon}
-                  alt={skill.name}
-                  w={imageSize}
-                  h={imageSize}
-                  objectFit="contain"
-                  loading="lazy"
-                />
-                <Text
-                  fontSize={{ base: "sm", md: "md" }}
-                  fontWeight="500"
-                  color="gray.700"
-                  textAlign="center"
-                >
-                  {skill.name}
-                </Text>
-              </Stack>
-            </Tooltip>
-          </MotionBox>
-        ))}
-      </SimpleGrid>
-    </Box>
+        <div className="mt-12 grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+          {skills.map((skill, index) => (
+            <motion.div
+              key={skill.name}
+              initial={{ opacity: 0, scale: 0.92 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: index * 0.04 }}
+              className="group flex flex-col items-center justify-center rounded-2xl border border-slate-200 bg-white p-4 text-center shadow-sm transition hover:-translate-y-1 hover:border-brand-200 hover:shadow-soft"
+            >
+              <img
+                src={skill.icon}
+                alt={skill.name}
+                className="h-12 w-12 object-contain md:h-14 md:w-14"
+                loading="lazy"
+              />
+              <p className="mt-3 text-sm font-medium text-slate-700">
+                {skill.name}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 

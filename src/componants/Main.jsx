@@ -1,5 +1,4 @@
 import React from "react";
-import { Box, Stack } from "@chakra-ui/react";
 import Home from "./Home.jsx";
 import Contact from "./Contact.jsx";
 import About from "./About.jsx";
@@ -12,11 +11,11 @@ import Tooles from "./Tooles";
 
 const Main = () => {
   return (
-    <Stack>
-      <Box position="fixed" zIndex="1" w="100%" height="5rem">
+    <div className="relative">
+      <div className="fixed top-0 left-0 z-50 w-full">
         <Navbar />
-      </Box>
-      <Box>
+      </div>
+      <main className="pt-20 md:pt-24">
         <Home />
         <About />
         <Skill />
@@ -25,8 +24,8 @@ const Main = () => {
         <Project />
         <Calendar />
         <Contact />
-      </Box>
-    </Stack>
+      </main>
+    </div>
   );
 };
 

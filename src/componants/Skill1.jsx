@@ -1,92 +1,64 @@
-import {
-  Box,
-  Heading,
-  SimpleGrid,
-  Tag,
-  Text,
-  Flex,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import React from "react";
 import { motion } from "framer-motion";
-import { DiGit, DiNodejs, DiReact } from "react-icons/di";
-import { SiExpress, SiMongodb, SiRedux } from "react-icons/si";
 
-const MotionBox = motion(Box);
+const pipelineStages = [
+  {
+    title: "Build",
+    description: "GitLab Runner executes build commands and bundles assets.",
+  },
+  {
+    title: "Test",
+    description: "Automated test suites keep regressions in check.",
+  },
+  {
+    title: "Deploy",
+    description: "Production releases shipped with confidence and monitoring.",
+  },
+];
 
 export const Skill1 = () => {
-  const columns = useBreakpointValue({ base: 2, md: 3, lg: 4 });
-  const pipelineDirection = useBreakpointValue({ base: "column", md: "row" });
-
   return (
-    <Box id="skills" py={16} px={{ base: 4, md: 8, lg: 16 }} bg="gray.50">
-      {/* Skills Section */}
-      <Box maxW="1200px" mx="auto" mb={16}>
-        <Heading as="h2" size="2xl" mb={4} textAlign="center" color="teal.600">
-          My Technical Skills
-        </Heading>
-        <Text fontSize="lg" textAlign="center" color="gray.600" maxW="800px" mx="auto">
-          A collection of technologies and tools I work with regularly to build scalable, maintainable applications and manage efficient DevOps pipelines.
-        </Text>
-      </Box>
+    <section id="skills" className="bg-slate-50 py-20 text-slate-900">
+      <div className="mx-auto max-w-6xl px-4 md:px-8">
+        <div className="text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">
+            Workflow
+          </p>
+          <h2 className="mt-3 text-3xl font-bold md:text-4xl">
+            CI/CD pipeline mindset
+          </h2>
+          <p className="mt-4 text-base text-slate-600 md:text-lg">
+            A snapshot of how I plan, test, and ship production-ready code with
+            modern DevOps practices.
+          </p>
+        </div>
 
-      {/* CI/CD Pipeline Visualization */}
-      <Box maxW="1200px" mx="auto">
-        <Heading as="h3" size="xl" mb={8} textAlign="center" color="teal.600">
-          CI/CD Pipeline
-        </Heading>
-
-        <Flex
-          direction={pipelineDirection}
-          justify="center"
-          align="center"
-          gap={6}
-          wrap="wrap"
-        >
-          {["Build", "Test", "Deploy"].map((stage, index) => (
-            <MotionBox
-              key={index}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {pipelineStages.map((stage, index) => (
+            <motion.div
+              key={stage.title}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: index * 0.2 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
             >
-              <Flex
-                direction="column"
-                align="center"
-                p={6}
-                bg="white"
-                borderRadius="xl"
-                boxShadow="lg"
-                position="relative"
-                minW="250px"
-                _after={{
-                  content: '""',
-                  position: "absolute",
-                  [pipelineDirection === "row" ? "right" : "bottom"]: "-30px",
-                  [pipelineDirection === "row" ? "top" : "left"]: "50%",
-                  width: pipelineDirection === "row" ? "30px" : "4px",
-                  height: pipelineDirection === "row" ? "4px" : "30px",
-                  bg: "teal.500",
-                  display: index === 2 ? "none" : "block",
-                  transform: pipelineDirection === "row" ? "translateY(-50%)" : "translateX(-50%)",
-                }}
-              >
-                <Text fontSize="xl" fontWeight="600" color="teal.600">
-                  {stage}
-                </Text>
-                <Text mt={2} color="gray.600" textAlign="center">
-                  {stage === "Build" && "GitLab Runner executes build commands"}
-                  {stage === "Test" && "Automated testing with Jest and Cypress"}
-                  {stage === "Deploy" && "Deployment to production environment"}
-                </Text>
-                <Tag mt={4} colorScheme="teal" borderRadius="full">
+              <div className="flex items-center justify-between">
+                <h3 className="text-xl font-semibold text-brand-600">
+                  {stage.title}
+                </h3>
+                <span className="rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-700">
                   Stage {index + 1}
-                </Tag>
-              </Flex>
-            </MotionBox>
+                </span>
+              </div>
+              <p className="mt-4 text-sm text-slate-600 md:text-base">
+                {stage.description}
+              </p>
+              <div className="absolute -right-10 -top-10 h-24 w-24 rounded-full bg-brand-100/60" />
+            </motion.div>
           ))}
-        </Flex>
-      </Box>
-    </Box>
+        </div>
+      </div>
+    </section>
   );
 };
