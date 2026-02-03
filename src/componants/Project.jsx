@@ -25,6 +25,8 @@ const projectImages = {
   Movie: require("./Assets/movie.png"),
   vdDashboard: require("./Assets/evdashboard.png"),
   book: require("./Assets/book.png"),
+  hr: require("./Assets/Hr.png"),
+  masterdashbord: require("./Assets/masterDashbaod.png"),
 };
 
 const projects = [
@@ -32,17 +34,35 @@ const projects = [
     title: "Tyre Management (ERP)",
     image: projectImages.dashboard,
     description:
-      "Role-based ERP platform with dashboards for master, side, and user admins.",
-    tech: "React | JavaScript | Bootstrap | MongoDB | Node.js | Express",
+      "A role-based ERP system for managing end-to-end OTR tyre operations, including sales, repairs, fitment, and lifecycle tracking. It provides real-time dashboards, supports 24×7 on-site services, and helps reduce downtime while improving tyre performance and operational efficiency",
+    tech: "React.js | Node.js | Express.js | PostgreSQL | AWS EC2 | CI/CD Pipeline",
     code: "https://suryakirangroup.com/",
     live: "https://suryakirangroup.com/",
+  },
+  {
+    title: "Sourabh Rolling Mill",
+    image: projectImages.masterdashbord,
+    description:
+      "A role-based ERP system designed to streamline operational workflows with dedicated dashboards for Super Admin, Sub Admin, and User roles. The platform enables secure data management, real-time monitoring, and efficient master entry handling through a scalable backend architecture.",
+    tech: "React.js | Node.js | Express.js | PostgreSQL | AWS EC2 | CI/CD Pipeline",
+    code: "https://sagargroup.co",
+    live: "https://sagargroup.co",
+  },
+  {
+    title: "HRFMS",
+    image: projectImages.hr,
+    description:
+      "An enterprise-grade HR and Finance Management System built to manage employee records, attendance, payroll, and administrative workflows. Features role-based access control, secure authentication, and automated deployment using a CI/CD pipeline on AWS infrastructure",
+    tech: "React.js | Node.js | Express.js | PostgreSQL | AWS EC2 | CI/CD Pipeline",
+    code: "https://hr.sagargroup.co/",
+    live: "https://hr.sagargroup.co/",
   },
   {
     title: "Smegrid",
     image: projectImages.smegrid,
     description:
       "Empowering manufacturers with smarter procurement and workforce tools.",
-    tech: "React | Tailwind CSS | Redux | Node.js | MongoDB",
+    tech: "React.js | Node.js | Express.js | MongoDB | AWS EC2 | CI/CD Pipeline",
     code: "https://github.com/RupeshSahu969/smegrid",
     live: "https://jazzy-paprenjak-6ea51f.netlify.app/",
   },
