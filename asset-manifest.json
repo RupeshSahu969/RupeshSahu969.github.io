@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.02ee1c73.css",
-    "main.js": "/static/js/main.37367043.js",
-    "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "main.css": "/static/css/main.3ad6d93d.css",
+    "main.js": "/static/js/main.d04c2cd4.js",
+    "static/js/453.3f1fb51b.chunk.js": "/static/js/453.3f1fb51b.chunk.js",
+    "static/media/mylogo.jpg": "/static/media/mylogo.de94cacb409919db4740.jpg",
     "static/media/cg.png": "/static/media/cg.b67c7d5964bba3794292.png",
     "static/media/horse.png": "/static/media/horse.62d8319a455a189d7a12.png",
     "static/media/geek.png": "/static/media/geek.f309be4c8d6e915e840b.png",
     "static/media/smegridpro1.png": "/static/media/smegridpro1.f5eaa26390f465855e41.png",
     "static/media/popart1.png": "/static/media/popart1.ead154dde42ab2b181aa.png",
     "static/media/foodimages.png": "/static/media/foodimages.dafbe781c114c663b2c7.png",
+    "static/media/masterDashbaod.png": "/static/media/masterDashbaod.512f1dac2fab62b28aea.png",
     "static/media/ecommarce_bacend.png": "/static/media/ecommarce_bacend.846e59b6b37bfabebd3c.png",
     "static/media/movie.png": "/static/media/movie.b1897a798573ada3dcc5.png",
     "static/media/fabbag.png": "/static/media/fabbag.21903b1d483673a6ad97.png",
+    "static/media/Hr.png": "/static/media/Hr.556c1df01dc03de2914c.png",
     "static/media/tata.png": "/static/media/tata.8c62b0ecfdf63156687f.png",
     "static/media/book.png": "/static/media/book.d3995135d5ce7267a48d.png",
     "static/media/myblogaapplication.png": "/static/media/myblogaapplication.605bd8b16971cbb680d9.png",
@@ -26,7 +29,6 @@
     "static/media/vscode.png": "/static/media/vscode.19edc3fbac1c451f289d.png",
     "static/media/evdashboard.png": "/static/media/evdashboard.75c53a06820d67311fb4.png",
     "static/media/logo.png": "/static/media/logo.299be2c300a1da44530a.png",
-    "static/media/mypic1.png": "/static/media/mypic1.4142555714d1835c5488.png",
     "static/media/aidetection.png": "/static/media/aidetection.b128ebd220aa2c7618f6.png",
     "static/media/jobpotal.png": "/static/media/jobpotal.6a82d560a9af92fbad76.png",
     "static/media/gitlab.png": "/static/media/gitlab.ff3532ccbd3d9605ee4e.png",
@@ -36,12 +38,12 @@
     "static/media/css.png": "/static/media/css.463e319bad8e0edf1ef7.png",
     "static/media/js.png": "/static/media/js.3dfb665e058d08c99f28.png",
     "index.html": "/index.html",
-    "main.02ee1c73.css.map": "/static/css/main.02ee1c73.css.map",
-    "main.37367043.js.map": "/static/js/main.37367043.js.map",
-    "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
+    "main.3ad6d93d.css.map": "/static/css/main.3ad6d93d.css.map",
+    "main.d04c2cd4.js.map": "/static/js/main.d04c2cd4.js.map",
+    "453.3f1fb51b.chunk.js.map": "/static/js/453.3f1fb51b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.02ee1c73.css",
-    "static/js/main.37367043.js"
+    "static/css/main.3ad6d93d.css",
+    "static/js/main.d04c2cd4.js"
   ]
 }
