@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.3ad6d93d.css",
-    "main.js": "/static/js/main.d04c2cd4.js",
-    "static/js/453.3f1fb51b.chunk.js": "/static/js/453.3f1fb51b.chunk.js",
+    "main.css": "/static/css/main.76e028df.css",
+    "main.js": "/static/js/main.ac7dc8d7.js",
+    "static/js/206.ef2d90f6.chunk.js": "/static/js/206.ef2d90f6.chunk.js",
     "static/media/mylogo.jpg": "/static/media/mylogo.de94cacb409919db4740.jpg",
     "static/media/cg.png": "/static/media/cg.b67c7d5964bba3794292.png",
     "static/media/horse.png": "/static/media/horse.62d8319a455a189d7a12.png",
@@ -32,18 +32,10 @@
     "static/media/aidetection.png": "/static/media/aidetection.b128ebd220aa2c7618f6.png",
     "static/media/jobpotal.png": "/static/media/jobpotal.6a82d560a9af92fbad76.png",
     "static/media/gitlab.png": "/static/media/gitlab.ff3532ccbd3d9605ee4e.png",
-    "static/media/node.png": "/static/media/node.1fac080eeec0a547c743.png",
-    "static/media/html.png": "/static/media/html.67c5dff43ae548efd534.png",
-    "static/media/tailwined.png": "/static/media/tailwined.9f132f2b9101c5fb8079.png",
-    "static/media/css.png": "/static/media/css.463e319bad8e0edf1ef7.png",
-    "static/media/js.png": "/static/media/js.3dfb665e058d08c99f28.png",
-    "index.html": "/index.html",
-    "main.3ad6d93d.css.map": "/static/css/main.3ad6d93d.css.map",
-    "main.d04c2cd4.js.map": "/static/js/main.d04c2cd4.js.map",
-    "453.3f1fb51b.chunk.js.map": "/static/js/453.3f1fb51b.chunk.js.map"
+    "index.html": "/index.html"
   },
   "entrypoints": [
-    "static/css/main.3ad6d93d.css",
-    "static/js/main.d04c2cd4.js"
+    "static/css/main.76e028df.css",
+    "static/js/main.ac7dc8d7.js"
   ]
 }
