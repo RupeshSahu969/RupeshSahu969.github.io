@@ -31,8 +31,14 @@ const contacts = [
 
 const Contact = () => {
   return (
-    <section id="contact" className="bg-slate-900 py-20 text-white">
-      <div className="mx-auto max-w-5xl px-4 md:px-8">
+    <section id="contact" className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-28 text-white overflow-hidden">
+      {/* Animated background blobs */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-40 left-1/4 h-96 w-96 rounded-full bg-gradient-to-br from-brand-500 to-emerald-500 blur-3xl animate-pulse" />
+        <div className="absolute bottom-40 right-1/4 h-96 w-96 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 blur-3xl animate-pulse" />
+      </div>
+
+      <div className="relative mx-auto max-w-7xl px-4 md:px-8">
         <div className="text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-300">
             Contact

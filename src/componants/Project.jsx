@@ -239,70 +239,144 @@ const projects = [
   },
 ];
 
+
 const Project = () => {
+  // Define vibrant, professional linear gradients for cards
+  const cardBackgrounds = [
+    "bg-gradient-to-br from-blue-500/50 via-cyan-400/50 to-teal-400/60",
+    "bg-gradient-to-br from-purple-500/50 via-pink-500/50 to-rose-400/60",
+    "bg-gradient-to-br from-emerald-500/50 via-green-400/50 to-lime-400/60",
+    "bg-gradient-to-br from-orange-500/50 via-amber-400/50 to-yellow-400/60",
+    "bg-gradient-to-br from-red-500/50 via-rose-500/50 to-pink-400/60",
+    "bg-gradient-to-br from-indigo-500/50 via-blue-500/50 to-sky-400/60",
+    "bg-gradient-to-br from-violet-500/50 via-purple-500/50 to-fuchsia-400/60",
+    "bg-gradient-to-br from-teal-500/50 via-emerald-500/50 to-cyan-400/60",
+  ];
+
+  const borderColors = [
+    "border-blue-100 hover:border-blue-300",
+    "border-purple-100 hover:border-purple-300",
+    "border-emerald-100 hover:border-emerald-300",
+    "border-orange-100 hover:border-orange-300",
+    "border-rose-100 hover:border-rose-300",
+    "border-indigo-100 hover:border-indigo-300",
+  ];
+
   return (
-    <section id="projects" className="bg-slate-50 py-20 text-slate-900">
-      <div className="mx-auto max-w-6xl px-4 md:px-8">
+    <section id="projects" className="relative bg-gradient-to-br from-indigo-50 via-violet-50 to-purple-50 py-28 text-slate-900 overflow-hidden">
+      {/* Animated background blobs */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-40 left-1/4 h-96 w-96 rounded-full bg-gradient-to-br from-indigo-400 to-violet-400 blur-3xl animate-pulse" />
+        <div className="absolute bottom-40 right-1/4 h-96 w-96 rounded-full bg-gradient-to-br from-purple-400 to-fuchsia-400 blur-3xl animate-pulse" />
+      </div>
+
+      <div className="relative mx-auto max-w-7xl px-4 md:px-8">
         <div className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">
-            Projects
-          </p>
-          <h2 className="mt-3 text-3xl font-bold md:text-4xl">
-            Selected work & experiments
-          </h2>
+          <motion.p
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-sm font-bold uppercase tracking-[0.25em] text-brand-600"
+          >
+            Portfolio
+          </motion.p>
+          <motion.h2
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="mt-4 text-4xl font-extrabold md:text-5xl"
+          >
+            Featured Projects
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="mx-auto mt-3 max-w-2xl text-base text-slate-600"
+          >
+            Explore my professional work across web development, enterprise systems, and innovative applications
+          </motion.p>
         </div>
 
-        <div className="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-          {projects.map((project, index) => (
-            <motion.article
-              key={`${project.title}-${index}`}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: (index % 6) * 0.05 }}
-              className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:border-brand-200 hover:shadow-soft"
-            >
-              <div className="h-52 overflow-hidden bg-slate-100">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                  loading="lazy"
-                />
-              </div>
-              <div className="flex h-full flex-col p-5">
-                <h3 className="text-lg font-semibold text-slate-800">
-                  {project.title}
-                </h3>
-                <p className="mt-3 text-sm text-slate-600">
-                  {project.description}
-                </p>
-                <p className="mt-4 rounded-lg bg-brand-50 px-3 py-2 text-xs font-semibold text-brand-700">
-                  {project.tech}
-                </p>
-                <div className="mt-5 flex gap-3">
-                  <a
-                    href={project.code}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex flex-1 items-center justify-center gap-2 rounded-full border border-brand-200 px-4 py-2 text-xs font-semibold text-brand-700 transition hover:bg-brand-100"
-                  >
-                    <FaGithub />
-                    Code
-                  </a>
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex flex-1 items-center justify-center gap-2 rounded-full bg-brand-500 px-4 py-2 text-xs font-semibold text-slate-900 transition hover:bg-brand-400"
-                  >
-                    <FaExternalLinkAlt />
-                    Live
-                  </a>
+        <div className="mt-16 grid gap-8 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+          {projects.map((project, index) => {
+            const bgClass = cardBackgrounds[index % cardBackgrounds.length];
+            const borderClass = borderColors[index % borderColors.length];
+            const techArray = project.tech.split("|").map((t) => t.trim());
+
+            return (
+              <motion.article
+                key={`${project.title}-${index}`}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: (index % 9) * 0.05 }}
+                className={`group relative flex h-full flex-col overflow-hidden rounded-3xl border-2 ${borderClass} ${bgClass} shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl`}
+              >
+                {/* Image Container with Overlay */}
+                <div className="relative h-56 overflow-hidden bg-slate-200">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-110 group-hover:rotate-1"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 </div>
-              </div>
-            </motion.article>
-          ))}
+
+                {/* Content Container */}
+                <div className="flex flex-1 flex-col justify-between p-6">
+                  <div className="flex-1">
+                    {/* Title */}
+                    <h3 className="text-xl font-bold text-slate-900 transition-colors group-hover:text-brand-700">
+                      {project.title}
+                    </h3>
+
+                    {/* Description with line clamp */}
+                    <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-slate-700">
+                      {project.description}
+                    </p>
+
+                    {/* Tech Stack Badges */}
+                    <div className="mt-5 flex flex-wrap gap-2">
+                      {techArray.map((tech, techIndex) => (
+                        <span
+                          key={techIndex}
+                          className="inline-block rounded-md bg-white/80 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-slate-700 shadow-sm backdrop-blur-sm transition-all hover:bg-white hover:shadow-md"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="mt-6 flex gap-3">
+                    <a
+                      href={project.code}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex flex-1 items-center justify-center gap-2 rounded-xl border-2 border-slate-300 bg-white/50 px-4 py-2.5 text-sm font-bold text-slate-800 backdrop-blur-sm transition-all hover:border-slate-400 hover:bg-white hover:shadow-md"
+                    >
+                      <FaGithub className="text-base" />
+                      <span>Code</span>
+                    </a>
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-brand-600 px-4 py-2.5 text-sm font-bold text-white shadow-md transition-all hover:bg-brand-700 hover:shadow-xl"
+                    >
+                      <FaExternalLinkAlt className="text-sm" />
+                      <span>Live Demo</span>
+                    </a>
+                  </div>
+                </div>
+              </motion.article>
+            );
+          })}
         </div>
       </div>
     </section>

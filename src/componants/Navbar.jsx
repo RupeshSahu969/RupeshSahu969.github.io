@@ -9,13 +9,13 @@ const Navbar = () => {
   const navItems = [
     { label: "Home", to: "home" },
     { label: "About", to: "about" },
-    { label: "Skills", to: "skill" },
+    { label: "Skills", to: "skills" },
     { label: "Projects", to: "projects" },
     { label: "Contact", to: "contact" },
   ];
 
   return (
-    <header className="border-b border-slate-200 bg-white">
+    <header className="border-b border-slate-200 bg-white shadow-sm">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-8">
         <button
           type="button"
@@ -32,7 +32,7 @@ const Navbar = () => {
               to={item.to}
               smooth
               spy
-              offset={-80}
+              offset={-70}
               duration={500}
               activeClass="text-brand-600"
               className="cursor-pointer transition hover:text-brand-600"
@@ -79,7 +79,7 @@ const Navbar = () => {
                   to={item.to}
                   smooth
                   spy
-                  offset={-80}
+                  offset={-70}
                   duration={500}
                   onClick={() => setIsOpen(false)}
                   className="cursor-pointer transition hover:text-brand-600"

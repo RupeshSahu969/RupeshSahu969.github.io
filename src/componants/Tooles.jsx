@@ -12,8 +12,14 @@ const tools = [
 
 const Tooles = () => {
   return (
-    <section id="tools" className="bg-white py-20 text-slate-900">
-      <div className="mx-auto max-w-6xl px-4 md:px-8">
+    <section id="tools" className="relative bg-gradient-to-br from-rose-50 via-pink-50 to-fuchsia-50 py-28 text-slate-900 overflow-hidden">
+      {/* Animated background blobs */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-40 left-1/4 h-96 w-96 rounded-full bg-gradient-to-br from-rose-400 to-pink-400 blur-3xl animate-pulse" />
+        <div className="absolute bottom-40 right-1/4 h-96 w-96 rounded-full bg-gradient-to-br from-fuchsia-400 to-purple-400 blur-3xl animate-pulse" />
+      </div>
+
+      <div className="relative mx-auto max-w-7xl px-4 md:px-8">
         <div className="text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">
             Tooling

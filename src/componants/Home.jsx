@@ -9,9 +9,15 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen bg-white text-slate-900"
+      className="relative min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 text-slate-900 overflow-hidden"
     >
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-24 md:px-8 lg:grid-cols-[1.1fr_0.9fr]">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-20 right-20 h-96 w-96 rounded-full bg-gradient-to-br from-emerald-400 to-teal-400 blur-3xl" />
+        <div className="absolute bottom-20 left-20 h-96 w-96 rounded-full bg-gradient-to-br from-cyan-400 to-blue-400 blur-3xl" />
+      </div>
+
+      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 pt-32 pb-24 md:px-8 md:pt-36 lg:grid-cols-[1.1fr_0.9fr]">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -42,7 +48,7 @@ const Home = () => {
             <ScrollLink
               to="projects"
               smooth
-              offset={-80}
+              offset={-70}
               duration={500}
               className="cursor-pointer rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-slate-900 shadow-soft transition hover:bg-brand-400"
             >
@@ -51,7 +57,7 @@ const Home = () => {
             <ScrollLink
               to="contact"
               smooth
-              offset={-80}
+              offset={-70}
               duration={500}
               className="cursor-pointer rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-brand-300 hover:text-brand-600"
             >
@@ -71,7 +77,7 @@ const Home = () => {
             ].map((item, index) => (
               <a
                 key={index}
-                href={item.href} 
+                href={item.href}
                 target={item.href.startsWith("http") ? "_blank" : undefined}
                 rel={item.href.startsWith("http") ? "noreferrer" : undefined}
                 className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 text-lg text-slate-600 transition hover:border-brand-400 hover:text-brand-600"
@@ -91,11 +97,14 @@ const Home = () => {
           <div className="relative">
             <div className="absolute -left-8 -top-8 h-40 w-40 animate-float rounded-full bg-brand-500/20 blur-2xl" />
             <div className="absolute -bottom-10 -right-10 h-32 w-32 animate-float rounded-full bg-emerald-500/20 blur-2xl" />
-            <div className="relative h-72 w-72 overflow-hidden rounded-[32px] border border-slate-200 bg-slate-100 p-3 shadow-soft md:h-80 md:w-80">
+            <div className="relative h-72 w-72 overflow-hidden rounded-[32px] border border-slate-200 bg-gradient-to-br from-slate-100 to-slate-200 p-3 shadow-soft md:h-80 md:w-80">
               <img
                 src={mylogo}
                 alt="Rupesh Sahu"
                 className="h-full w-full rounded-[24px] object-cover"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
               />
             </div>
           </div>
